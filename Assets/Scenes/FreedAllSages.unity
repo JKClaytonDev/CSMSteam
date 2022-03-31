@@ -3354,6 +3354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2742956470448894285, guid: a41e6dece68945e46b8c058508826063, type: 3}
+      propertyPath: noAmmoSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: ca9756221efe6124dba798b9f269081f, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a41e6dece68945e46b8c058508826063, type: 3}
@@ -3906,6 +3910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SageLoadScene
       objectReference: {fileID: 0}
+    - target: {fileID: 8503720969748211619, guid: 84d395dc26be11049bc54c54617bf359, type: 3}
+      propertyPath: track
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e76fc35984cd4743896ec3729e35a5c, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 84d395dc26be11049bc54c54617bf359, type: 3}

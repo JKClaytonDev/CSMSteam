@@ -47,7 +47,7 @@ public class PlayerDoll : MonoBehaviour
         anim.Play("PullDoll");
         if (FindObjectOfType<MusicManager>())
         {
-            FindObjectOfType<MusicManager>().GetComponent<AudioSource>().volume = 0.1f * PlayerPrefs.GetFloat("MusicVolume") / 100;
+            FindObjectOfType<MusicManager>().GetComponent<AudioSource>().volume = 0.3f * PlayerPrefs.GetFloat("MusicVolume") / 100;
         }
     }
 
@@ -60,7 +60,7 @@ public class PlayerDoll : MonoBehaviour
         {
             if (FindObjectOfType<MusicManager>())
             {
-                FindObjectOfType<MusicManager>().GetComponent<AudioSource>().volume = 1 * PlayerPrefs.GetFloat("MusicVolume") / 100;
+                FindObjectOfType<MusicManager>().GetComponent<AudioSource>().volume = 1.5f * PlayerPrefs.GetFloat("MusicVolume") / 100;
             }
             FindObjectOfType<PlayerMovement>().dollActive = false;
             Destroy(gameObject);

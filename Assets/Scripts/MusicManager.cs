@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
 
         startTime = Time.realtimeSinceStartup + 2;
         source = GetComponent<AudioSource>();
-        source.volume = 1.75f * PlayerPrefs.GetFloat("MusicVolume") / 100 ;
+        source.volume = 1.5f * 1.75f * PlayerPrefs.GetFloat("MusicVolume") / 100 ;
         int trackNum = SceneManager.GetActiveScene().buildIndex;
         string name = SceneManager.GetActiveScene().name;
         while (trackNum > tracks.Length - 1)
@@ -40,7 +40,7 @@ public class MusicManager : MonoBehaviour
         GetComponent<AudioSource>().clip = soundClip;
         GetComponent<AudioSource>().Play();
         GetComponent<AudioSource>().loop = true;
-        source.volume = 1.75f * PlayerPrefs.GetFloat("MusicVolume") / 100;
+        source.volume = 1.5f * 1.75f * PlayerPrefs.GetFloat("MusicVolume") / 100;
     }
 
 

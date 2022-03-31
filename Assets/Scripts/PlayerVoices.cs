@@ -73,7 +73,7 @@ public class PlayerVoices : MonoBehaviour
     }
     public void KillZombie()
     {
-        if (Random.Range(1, 100) > 100 - ((100 - 95) * multiplier))
+        if (Random.Range(1, 100) > 100 - ((100 - 98) * multiplier))
         {
             PlayClip(killZombieSounds);
             if (Time.realtimeSinceStartup > playTime)

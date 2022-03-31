@@ -73,6 +73,20 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 100);
+            Debug.Log("NO KEY");
+        }
+        if (!PlayerPrefs.HasKey("VoiceVolume"))
+        {
+            PlayerPrefs.SetFloat("VoiceVolume", 100);
+            Debug.Log("NO KEY");
+        }
+        PlayerPrefs.Save();
+        FindObjectOfType<PlayerVoices>().updateSounds();
+
         PlayerPrefs.SetFloat("LevelStartTime", Time.realtimeSinceStartup);
         PlayerPrefs.SetFloat("LevelStartCash", 0);
         PlayerPrefs.SetFloat("LevelKills", 0);
