@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7709461084895372960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642020867696070999}
+  - component: {fileID: 155090917063712604}
+  m_Layer: 0
+  m_Name: EnemyTiers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1642020867696070999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709461084895372960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -95.22601, y: 81.24318, z: 242.26088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &155090917063712604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709461084895372960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa164cdf4ca4d84479b15010107c575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tier1:
+  - {fileID: 2137664007071348263, guid: 289cac8dd33be374f844f8e5668194e6, type: 3}
+  - {fileID: 3437672929981430992, guid: 522f0c1ab27d3024199547c321e69030, type: 3}
+  tier2:
+  - {fileID: 3943697806916003982, guid: 0259e563d4d07a24a985c2edc6356e6d, type: 3}
+  - {fileID: 7582639915084852546, guid: 7b4f5d79e91d8244a9659124225ed1d6, type: 3}
+  - {fileID: 7368344443437988592, guid: 4439707780a89fe4abb694af637bc604, type: 3}
+  - {fileID: 6806826734371400433, guid: 59c65c22d6f8e6a4cb794cdad3ed3c34, type: 3}
+  tier3:
+  - {fileID: 6975264994847268396, guid: 468abb6bd9f8050468c15f16ce151703, type: 3}
+  - {fileID: 6218017573196045967, guid: 44abfcec7b206d341ac135c2089c8f94, type: 3}
+  - {fileID: 3882041512053408824, guid: 482140b8d2dd7a64cbb5eedc2b4eaf23, type: 3}
+  - {fileID: 8768817316783348333, guid: ee8172ab14a1aaa41989e7e0caeb1f23, type: 3}
+  tier4:
+  - {fileID: 119167854630044928, guid: 7009a5901085403449b4bd052155c0d2, type: 3}
+  - {fileID: 5178302654710625689, guid: d9a7060b8c9b80e45840c54922e0ddbb, type: 3}
+  tier5:
+  - {fileID: 119167854630044928, guid: 7009a5901085403449b4bd052155c0d2, type: 3}
+  allEnemies: []

@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class gameSettings : MonoBehaviour
+{
+    public Slider s;
+    public Text SliderText;
+    public Slider GraphicsSlider;
+    public Text GraphicsSliderText;
+    Resolution startRes;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        s.value = PlayerPrefs.GetFloat("MouseSens");
+        startRes = Screen.currentResolution;
+    }
+    public void apply()
+    {
+        Screen.SetResolution((int)(startRes.width * GraphicsSlider.value), (int)(startRes.height * GraphicsSlider.value), Screen.fullScreen);
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        GraphicsSliderText.text = Mathf.Round(GraphicsSlider.value*100)+"";
+        SliderText.text = Mathf.Round(s.value) + "";
+        PlayerPrefs.SetFloat("MouseSens", s.value);
+        PlayerPrefs.Save();
+    }
+    public void setGraphics(int g)
+    {
+        QualitySettings.SetQualityLevel(g);
+    }
+    public void changeResolution(float multi)
+    {
+        Screen.SetResolution((int)(Screen.width * multi), (int)(Screen.height * multi), Screen.fullScreen);
+    }
+    public void toggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+}

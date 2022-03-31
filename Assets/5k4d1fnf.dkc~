@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FinalBossManager : MonoBehaviour
+{
+    public GameObject[] enemies;
+    float spawnTime;
+    ArrayList activeEnemies;
+    public GameObject light;
+    // Start is called before the first frame update
+    void Start()
+    {
+        spawnTime = Time.realtimeSinceStartup + 5;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.realtimeSinceStartup > spawnTime)
+        {
+            foreach (GameObject g in activeEnemies)
+            {
+                g.gameObject.SetActive(true);
+                activeEnemies.Remove(g.gameObject);
+            }
+            spawnTime += 5;
+            GameObject k = Instantiate(enemies[Random.Range(0, enemies.Length-1)]);
+            k.SetActive(true);
+            k.transform.position = transform.position;
+            foreach (Transform g in k.transform)
+            {
+                GameObject l = Instantiate(light);
+                l.transform.parent = null;
+                l.transform.position = g.transform.position;
+                g.gameObject.SetActive(false);
+                Destroy(l, 0.5f);
+                g.transform.parent = null;
+                activeEnemies.Add(g.gameObject);
+            }
+            Destroy(k);
+        }
+    }
+}

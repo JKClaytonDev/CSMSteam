@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Vampire : MonoBehaviour
+{
+    GameObject player;
+    Vector3 origin;
+    float shootTime;
+    public GameObject bullet;
+    public bool lghost;
+    // Start is called before the first frame update
+    void Start()
+    {
+        shootTime = Time.realtimeSinceStartup + 1;
+        origin = transform.position;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 pos = origin - player.transform.position + origin;
+        pos.y = player.transform.position.y+Mathf.Abs(Time.realtimeSinceStartup)/3;
+        if (!lghost)
+        {
+            float timeScale = (Time.realtimeSinceStartup + Mathf.Sin(Time.realtimeSinceStartup) / 2) / 5 + Mathf.Cos(Time.realtimeSinceStartup / 2);
+            pos = origin + (Vector3.right * Mathf.Sin(timeScale) + Vector3.forward * Mathf.Cos(timeScale)) * 25;
+        }
+        transform.position = pos;
+        pos = transform.localPosition;
+        pos.y = 0;
+        transform.localPosition = pos;
+        if (Time.realtimeSinceStartup > shootTime)
+        {
+            shootTime += 0.3f;
+            
+            GameObject b = Instantiate(bullet);
+            b.transform.position = transform.position + transform.forward;
+            b.transform.LookAt(player.transform);
+            b.transform.parent = null;
+            b.gameObject.SetActive(true);
+            Destroy(b, 5);
+        }
+    }
+}

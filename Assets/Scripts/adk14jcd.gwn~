@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class MainMenuButtons : MonoBehaviour
+{
+    public GameObject cont;
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (!PlayerPrefs.HasKey("MouseSens"))
+            PlayerPrefs.SetFloat("MouseSens", 15);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        cont.SetActive(true);
+    }
+    public void newGame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Castle1");
+    }
+    public void continueGame()
+    {
+        SceneManager.LoadScene("Hub1");
+    }
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+    
+}

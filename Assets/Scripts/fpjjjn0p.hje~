@@ -1,0 +1,35 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class billboardOBJ : MonoBehaviour
+{
+    Vector3 startRot;
+    public Vector3 autoRotate;
+    public bool removeParent;
+    public Vector3 offset = new Vector3(0, -90, 0);
+    GameObject player;
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (removeParent)
+            transform.parent = null;
+        startRot = transform.localEulerAngles;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.frameCount % 2 == 0)
+            return;
+        Vector3 pos = player.transform.position - player.transform.forward * 3;
+        transform.LookAt(pos);
+        transform.Rotate(offset);
+        Vector3 rot = transform.localEulerAngles;
+        rot.x = startRot.x;
+        rot.z = startRot.z;
+        transform.localEulerAngles = rot + (autoRotate * Time.realtimeSinceStartup);
+
+    }
+}
