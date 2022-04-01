@@ -17,19 +17,32 @@ public class gameSettings : MonoBehaviour
     public Dropdown aaDropdown;
     public Slider volumeSlider;
     float currentVolume;
+    public Slider FOV;
+    public Text fovText;
     public UnityEngine.Resolution[] resolutions;
     public void setFullscreen(bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
     }
+    public void setFOV(float f)
+    {
+        PlayerPrefs.SetFloat("FOV", f);
+        fovText.text = "" + f;
+        FOV.value = f;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
+        if (!PlayerPrefs.HasKey("FOV"))
+            PlayerPrefs.SetFloat("FOV", 90);
+        FOV.value = PlayerPrefs.GetFloat("FOV");
         qualityDropdown.SetValueWithoutNotify(QualitySettings.GetQualityLevel());
         qualityDropdown.value = QualitySettings.GetQualityLevel();
         if (!PlayerPrefs.HasKey("MouseSens"))
             PlayerPrefs.SetFloat("MouseSens", 10);
         s.value = PlayerPrefs.GetFloat("MouseSens");
+        if (VolumeSlider)
         VolumeSlider.value = AudioListener.volume * 100;
         resolutions = Screen.resolutions;
 
@@ -80,6 +93,7 @@ public class gameSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (VolumeSlider)
         AudioListener.volume = VolumeSlider.value/100;
         VolumeSliderText.text = Mathf.Round(VolumeSlider.value)+"";
         SliderText.text = Mathf.Round(s.value) + "";

@@ -172,7 +172,7 @@ public class MapMakerCamera : MonoBehaviour
         {
             Vector3 move = new Vector3(Time.deltaTime / Time.timeScale * 250 * -Input.GetAxis("Mouse Y"), Time.deltaTime / Time.timeScale * 250 * Input.GetAxis("Mouse X"), 0);
             transform.position += 15 * camSpeed * Time.deltaTime / Time.timeScale * (Input.GetAxis("Vertical") * transform.forward + Input.GetAxis("Horizontal") * transform.right);
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey((PlayerPrefs.GetString("GhostKeybind"))))
             {
                 if (Mathf.Abs(move.x) > Mathf.Abs(move.y) && Mathf.Abs(move.x) > Mathf.Abs(move.z))
                 {

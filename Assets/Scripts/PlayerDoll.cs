@@ -67,7 +67,7 @@ public class PlayerDoll : MonoBehaviour
             Time.timeScale = 1;
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
+        if ((Input.GetKeyDown(PlayerPrefs.GetString("JumpKeybind")) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
         {
             textIndex++;
             if (imageIndexes[textIndex] == dollSprite)

@@ -24,7 +24,7 @@ public class autoRotate : MonoBehaviour
     void Update()
     {
 
-        if (goalRot == transform.localEulerAngles && Input.GetKeyDown(KeyCode.E))
+        if (goalRot == transform.localEulerAngles && Input.GetKeyDown(PlayerPrefs.GetString("FlashlightKeybind")))
         {
             Vector3 lastTargetRot = targetRot;
             set = false;

@@ -28,7 +28,7 @@ public class Exorcist : MonoBehaviour
         image.GetComponent<RectTransform>().localScale -= new Vector3(0.2f*Time.deltaTime, 0, 0);
         if (image.GetComponent<RectTransform>().localScale.x < 0.1f)
             image.GetComponent<RectTransform>().localScale = new Vector3(0.1f, 1, 1);
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown("joystick button 4"))
+        if (Input.GetKeyDown((PlayerPrefs.GetString("GhostKeybind"))) || Input.GetKeyDown("joystick button 4"))
         {
             image.GetComponent<RectTransform>().localScale += new Vector3(0.1f, 0, 0);
         }

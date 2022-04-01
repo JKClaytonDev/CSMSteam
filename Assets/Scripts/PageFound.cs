@@ -40,7 +40,7 @@ public class PageFound : MonoBehaviour
             findPage();
             check = true;
         }
-        if (check && Input.GetKey(KeyCode.Escape))
+        if (check && Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")))
         {
             Destroy(gameObject);
         }

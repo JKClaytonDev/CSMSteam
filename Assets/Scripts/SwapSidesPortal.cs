@@ -13,7 +13,7 @@ public class SwapSidesPortal : MonoBehaviour
     private void Update()
     {
         return;
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown((PlayerPrefs.GetString("GhostKeybind"))))
         {
             if (Time.realtimeSinceStartup > swapTime)
             {

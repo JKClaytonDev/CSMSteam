@@ -99,7 +99,7 @@ namespace UnityTemplateProjects
             {
                 direction += Vector3.down;
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")))
             {
                 direction += Vector3.up;
             }
@@ -109,7 +109,7 @@ namespace UnityTemplateProjects
         void Update()
         {
             // Exit Sample  
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")))
             {
                 Application.Quit();
 				#if UNITY_EDITOR
@@ -145,7 +145,7 @@ namespace UnityTemplateProjects
             var translation = GetInputTranslationDirection() * Time.deltaTime;
 
             // Speed up movement when shift key held
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(PlayerPrefs.GetString("RunKeybind")))
             {
                 translation *= 10.0f;
             }

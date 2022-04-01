@@ -91,9 +91,9 @@ public class PlayerAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && !magicAnim.GetBool("FlashLight") && !Input.GetKey(KeyCode.E) && !magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold"))
+        if (Input.GetKey(PlayerPrefs.GetString("WhipKeybind")) && !magicAnim.GetBool("FlashLight") && !Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && !magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold"))
         {
-            if (PlayerPrefs.GetInt("EquippedWeapon9") == 1)
+            if (PlayerPrefs.GetInt("EquippedWeapon9") == 1 || PlayerPrefs.GetInt("Missions") == 1)
             {
                 whipFire = true;
                 gunAnim.Play("WhipFire");
@@ -101,7 +101,7 @@ public class PlayerAnimations : MonoBehaviour
         }
         if (!mov)
             mov = player.GetComponent<PlayerMovement>();
-        gunAnim.SetBool("Run", gunName != "RocketLauncher" && Input.GetKey(KeyCode.LeftShift) && gunAnim.GetCurrentAnimatorStateInfo(0).IsName(gunName+"Idle") && Time.realtimeSinceStartup > mov.jumpTime);
+        gunAnim.SetBool("Run", gunName != "RocketLauncher" && Input.GetKey(PlayerPrefs.GetString("RunKeybind")) && gunAnim.GetCurrentAnimatorStateInfo(0).IsName(gunName+"Idle") && Time.realtimeSinceStartup > mov.jumpTime);
         if (Time.realtimeSinceStartup > checkTime)
         {
             running = (Vector3.Distance(player.transform.position, lPP) > 1);
@@ -174,7 +174,7 @@ public class PlayerAnimations : MonoBehaviour
             {
                 magicAnim.Play("Magic" + Random.Range(1, 2));
             }
-            if ((Input.GetAxis("Flashlight") != 0 || Time.realtimeSinceStartup < lightTime))
+            if (Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) || Time.realtimeSinceStartup < lightTime)
             {
                     lightTime = Time.realtimeSinceStartup + 0.2f;
                     magicAnim.Play("FlashLight");
@@ -185,7 +185,7 @@ public class PlayerAnimations : MonoBehaviour
             gunAnim.speed = 0;
             gunAnim.transform.localPosition += Vector3.up * -1255 * Time.deltaTime;
         }
-        magicAnim.SetBool("FlashLight", Input.GetKey("e") && !Input.GetKey(KeyCode.V) && !whipFire);
+        magicAnim.SetBool("FlashLight", Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && !Input.GetKey(PlayerPrefs.GetString("WhipKeybind")) && !whipFire);
         if (gunReady && magicReady)
         {
                 if (Input.GetKeyDown("1"))
@@ -241,7 +241,7 @@ public class PlayerAnimations : MonoBehaviour
                 gunAnim.speed *= 0.9f;
             gunAnim.SetLayerWeight(1, 1);
             gunAnim.transform.localPosition = new Vector2(0, 0);
-            if (Input.GetMouseButtonDown(0) || ((wepIndex == 3 || wepIndex == 10) && Input.GetMouseButton(0)) || Input.GetKeyDown(KeyCode.LeftControl)){
+            if (Input.GetMouseButtonDown(0) || ((wepIndex == 3 || wepIndex == 10) && Input.GetMouseButton(0))){
                 if (FindObjectOfType<WeaponsAnim>().playerAmmo > 0)
                 gunAnim.Play(gunName + "Fire");
                 Debug.Log("SHOOT");

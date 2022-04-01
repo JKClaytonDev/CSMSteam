@@ -26,7 +26,7 @@ public class DoorChoice : MonoBehaviour
         if (closePlayerObject)
             player = closePlayerObject.attachedPlayer;
         canvas.SetActive(Vector3.Distance(transform.position, player.transform.position) < 10 && PlayerPrefs.GetInt("PickedDoor") == 0);
-        if (canvas.activeInHierarchy && Input.GetKey(KeyCode.E) && PlayerPrefs.GetInt("PickedDoor") == 0)
+        if (canvas.activeInHierarchy && Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && PlayerPrefs.GetInt("PickedDoor") == 0)
         {
             PlayerPrefs.SetInt("PickedDoor", side);
             if (PlayerPrefs.GetInt("Missions") != 1){PlayerPrefs.Save();}

@@ -53,7 +53,7 @@ public class SettingsMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(PlayerPrefs.GetString("FlashlightKeybind")))
         {
             resume();
         }

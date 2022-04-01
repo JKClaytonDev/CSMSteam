@@ -164,14 +164,14 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         sens = PlayerPrefs.GetFloat("MouseSens") * flipped;
-        if (!Input.GetKey(KeyCode.Space))
+        if (!Input.GetKey(PlayerPrefs.GetString("JumpKeybind")))
             jumpHeld = false;
         if (Time.realtimeSinceStartup < startTime + 0.5f)
         {
             if (SceneManager.GetActiveScene().name == "Hub1" && PlayerPrefs.HasKey("SpawnX") && PlayerPrefs.GetInt("ShardCount") != 0 && PlayerPrefs.GetFloat("SpawnX") != 0)
                 transform.position = new Vector3(PlayerPrefs.GetFloat("SpawnX"), PlayerPrefs.GetFloat("SpawnY"), PlayerPrefs.GetFloat("SpawnZ"));
         }
-        if (Input.GetKey(KeyCode.Space) && !jumpHeld)
+        if (Input.GetKey(PlayerPrefs.GetString("JumpKeybind")) && !jumpHeld)
         {
             if (Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.2f))
             {
@@ -232,9 +232,9 @@ public class PlayerMovement : MonoBehaviour
             knockCooldown += Time.deltaTime * 10;
         hitmarker.SetActive(Time.realtimeSinceStartup < hitmarkerTime);
         if (weaponsAnim.GetCurrentAnimatorStateInfo(0).IsName("SniperAim") || weaponsAnim.GetCurrentAnimatorStateInfo(0).IsName("SniperAimFire"))
-            mainCam.fieldOfView = 30;
+            mainCam.fieldOfView = PlayerPrefs.GetFloat("FOV")/3;
         else
-            mainCam.fieldOfView = 90 + ((transform.position.y-mainCam.transform.position.y)*-5)/3;
+            mainCam.fieldOfView = PlayerPrefs.GetFloat("FOV") + ((transform.position.y-mainCam.transform.position.y)*-5)/3;
         if (c.gameObject.activeInHierarchy)
         {
 

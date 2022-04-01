@@ -9,6 +9,17 @@ public class MainMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("FOV"))
+            PlayerPrefs.SetFloat("FOV", 90);
+        if (!PlayerPrefs.HasKey("RunKeybind"))
+        {
+            PlayerPrefs.SetString("JumpKeybind", "space");
+            PlayerPrefs.SetString("RunKeybind", "left shift");
+            PlayerPrefs.SetString("FlashlightKeybind", "e");
+            PlayerPrefs.SetString("GhostKeybind", "f");
+            PlayerPrefs.SetString("WhipKeybind", "v");
+        }
+
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
@@ -39,9 +50,23 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void newGame()
     {
-        
+        string oldRunKeybind = PlayerPrefs.GetString("RunKeybind");
+        string oldJumpKeybind = PlayerPrefs.GetString("JumpKeybind");
+        string oldFlashlightKeybind = PlayerPrefs.GetString("FlashlightKeybind");
+        string oldGhostKeybind = PlayerPrefs.GetString("GhostKeybind");
+        string oldWhipKeybind = PlayerPrefs.GetString("WhipKeybind");
+        float oldFOV = PlayerPrefs.GetFloat("FOV");
+
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Lives", 5);
+        
+        PlayerPrefs.SetString("RunKeybind", oldRunKeybind);
+        PlayerPrefs.SetString("JumpKeybind", oldJumpKeybind);
+        PlayerPrefs.SetString("FlashlightKeybind", oldFlashlightKeybind);
+        PlayerPrefs.SetString("GhostKeybind", oldGhostKeybind);
+        PlayerPrefs.SetString("WhipKeybind", oldWhipKeybind);
+        PlayerPrefs.SetFloat("FOV", oldFOV);
+
         if (PlayerPrefs.GetInt("Missions") != 1){PlayerPrefs.Save();}
         SceneManager.LoadScene("IntroAnim");
     }
