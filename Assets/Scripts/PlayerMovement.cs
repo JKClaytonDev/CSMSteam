@@ -299,7 +299,7 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(-transform.localEulerAngles.x, 0, 0);
         float vely = GetComponent<Rigidbody>().velocity.y;
         speed = 1;
-        if (Input.GetAxis("Sprint") != 0)
+        if (Input.GetKey(PlayerPrefs.GetString("RunKeybind")))
         {
             justPressed = true;
                speed = 2;
