@@ -11,7 +11,16 @@ public class KeyBindings : MonoBehaviour
     }
     public void SetKeyBinding(string inp)
     {
-        PlayerPrefs.SetString(inputName, inp.ToLower());
+        try
+        {
+            Input.GetKey(inp.ToLower());
+            PlayerPrefs.SetString(inputName, inp.ToLower());
+        }
+        catch
+        {
+            return;
+        }
+        
     }
     public void resetKeys()
     {
