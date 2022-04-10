@@ -30,12 +30,16 @@ public class playerBullet : MonoBehaviour
     public bool returnAxe;
     float axeTime;
     public GameObject waterObject;
+    float startTime;
     public bool water;
     // Start is called before the first frame update
 
     // Update is called once per frame
     private void Start()
     {
+        startTime = Time.realtimeSinceStartup;
+        if (Time.timeSinceLevelLoad < 0.5f || Time.timeScale < 0.5f)
+            Destroy(gameObject);
         Camera.main.gameObject.GetComponent<Animator>().Play("recoil");
         canvas.SetActive(!(arrow || AlienBullet || Axe));
         if (Axe)
@@ -83,10 +87,10 @@ public class playerBullet : MonoBehaviour
         {
             returnAxe = true;
         }
-            if (returnAxe)
+        if (returnAxe)
         {
             rb.velocity = new Vector3();
-            transform.position = Vector3.MoveTowards(transform.position, playerParent.transform.position, Time.deltaTime*55);
+            transform.position = Vector3.MoveTowards(transform.position, playerParent.transform.position, Time.deltaTime * 55);
         }
         else if (Axe)
             rb.velocity = vel * 9;
@@ -176,6 +180,10 @@ public class playerBullet : MonoBehaviour
             damage = he.damages[1] * 1;
         else if (sniper)
             damage = he.damages[1] * 15;
+        else if (explode)
+            damage = he.damages[savedWep] * 25;
+        else if (AlienBullet)
+            damage = he.damages[savedWep] * 3;
         else
             damage = he.damages[savedWep] * 2;
         if (FindObjectOfType<PlayerMovement>().nightTime)

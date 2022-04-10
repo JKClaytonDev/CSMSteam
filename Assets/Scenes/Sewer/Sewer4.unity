@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 87.46802, g: 633, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 87.49487, g: 633, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -757,6 +757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 853672042}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1001 &256178284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5265,18 +5267,18 @@ MonoBehaviour:
   currentHealth: 1
   damages:
   - 0
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
-  - 0.014
+  - 0.0015555556
+  - 0.0046666665
+  - 0.0015555556
+  - 0.0046666665
+  - 0.0015555556
+  - 0.0046666665
+  - 0.0015555556
+  - 0.0046666665
+  - 0.0015555556
+  - 0.0046666665
+  - 0.0015555556
+  - 0.0046666665
   bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
   hitSound: {fileID: 0}
   bloodTime: 0.5

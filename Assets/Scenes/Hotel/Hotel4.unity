@@ -913,7 +913,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1207655595}
+  m_Mesh: {fileID: 1345871051}
 --- !u!33 &910681552
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -921,7 +921,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910681549}
-  m_Mesh: {fileID: 1207655595}
+  m_Mesh: {fileID: 1345871051}
 --- !u!23 &910681553
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2136,8 +2136,8 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1207655595}
-  m_VersionIndex: 1347
+  m_Mesh: {fileID: 1345871051}
+  m_VersionIndex: 1350
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2413,13 +2413,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1207655595
+--- !u!1 &1215582051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 20fc9d85c23fb634b9ba920af51e9f04, type: 3}
+  m_PrefabInstance: {fileID: 643535676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215582053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215582051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2f0c1d7163af146b2097f9b900105c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m: {fileID: 2076586586545986491, guid: 45225568e43f249499e906c879aee86c, type: 3}
+  dontshow: 0
+  stunTime: 0
+  enemyName: Pump Kenn
+  unkillable: 0
+  parent: {fileID: 0}
+  disableLowHealth: {fileID: 0}
+  currentHealth: 1
+  damages:
+  - 0
+  - 0.00011851857
+  - 0.00017777777
+  - 0.000711111
+  - 0.00029629632
+  - 0.00035555568
+  - 0.0026666666
+  - 0.0026666666
+  - 0.0026666666
+  - 0.0026666666
+  - 0.0053333333
+  bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
+  hitSound: {fileID: 0}
+  bloodTime: 0.5
+  colorTime: 0
+--- !u!65 &1215582054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215582051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -4.2, y: 1.79, z: 3.16}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1215582055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 20fc9d85c23fb634b9ba920af51e9f04, type: 3}
+  m_PrefabInstance: {fileID: 643535676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1215582056
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215582051}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d22453ae2acec0e4484b3e01ae948302, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!43 &1345871051
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38302
+  m_Name: pb_Mesh252522
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2588,85 +2667,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1215582051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 20fc9d85c23fb634b9ba920af51e9f04, type: 3}
-  m_PrefabInstance: {fileID: 643535676}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1215582053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215582051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2f0c1d7163af146b2097f9b900105c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m: {fileID: 2076586586545986491, guid: 45225568e43f249499e906c879aee86c, type: 3}
-  dontshow: 0
-  stunTime: 0
-  enemyName: Pump Kenn
-  unkillable: 0
-  parent: {fileID: 0}
-  disableLowHealth: {fileID: 0}
-  currentHealth: 1
-  damages:
-  - 0
-  - 0.0032
-  - 0.0048
-  - 0.0064
-  - 0.008
-  - 0.0096
-  - 0.008
-  - 0.008
-  - 0.008
-  - 0.008
-  - 0.016
-  bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
-  hitSound: {fileID: 0}
-  bloodTime: 0.5
-  colorTime: 0
---- !u!65 &1215582054
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215582051}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: -4.2, y: 1.79, z: 3.16}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1215582055 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 20fc9d85c23fb634b9ba920af51e9f04, type: 3}
-  m_PrefabInstance: {fileID: 643535676}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1215582056
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215582051}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d22453ae2acec0e4484b3e01ae948302, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1468101225
 GameObject:
   m_ObjectHideFlags: 1

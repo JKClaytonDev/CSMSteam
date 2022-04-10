@@ -6,6 +6,7 @@ public class PlayerAnimations : MonoBehaviour
 {
     bool missions;
     public bool whipFire;
+    float whipTime;
     public int lockGun;
     int equippedSlot = 1;
     int currentSlot = 1;
@@ -43,7 +44,7 @@ public class PlayerAnimations : MonoBehaviour
         unlockedWeapon2 = PlayerPrefs.GetInt("UnlockedIndex2");
         unlockedWeapon3 = PlayerPrefs.GetInt("UnlockedIndex3");
         unlockedWeapon4 = PlayerPrefs.GetInt("UnlockedIndex4");
-        missions = PlayerPrefs.GetInt("Missions") == 1;
+        missions = (PlayerPrefs.GetInt("Missions") == 1) || PlayerPrefs.GetInt("BossRush") == 1;
         if (missions)
         {
             unlockedWeapon1 = -1;
@@ -91,8 +92,9 @@ public class PlayerAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(PlayerPrefs.GetString("WhipKeybind")) && !magicAnim.GetBool("FlashLight") && !Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && !magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold"))
+        if (Input.GetKey(PlayerPrefs.GetString("WhipKeybind")) && !magicAnim.GetBool("FlashLight") && !Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && !magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold") && Time.realtimeSinceStartup > whipTime)
         {
+            whipTime = Time.realtimeSinceStartup + 1.5f;
             if (PlayerPrefs.GetInt("EquippedWeapon9") == 1 || PlayerPrefs.GetInt("Missions") == 1)
             {
                 whipFire = true;
@@ -101,7 +103,7 @@ public class PlayerAnimations : MonoBehaviour
         }
         if (!mov)
             mov = player.GetComponent<PlayerMovement>();
-        gunAnim.SetBool("Run", gunName != "RocketLauncher" && Input.GetKey(PlayerPrefs.GetString("RunKeybind")) && gunAnim.GetCurrentAnimatorStateInfo(0).IsName(gunName+"Idle") && Time.realtimeSinceStartup > mov.jumpTime);
+        gunAnim.SetBool("Run", gunName != "RocketLauncher" && player.GetComponent<PlayerMovement>().finalRun && gunAnim.GetCurrentAnimatorStateInfo(0).IsName(gunName+"Idle") && Time.realtimeSinceStartup > mov.jumpTime);
         if (Time.realtimeSinceStartup > checkTime)
         {
             running = (Vector3.Distance(player.transform.position, lPP) > 1);
@@ -241,12 +243,15 @@ public class PlayerAnimations : MonoBehaviour
                 gunAnim.speed *= 0.9f;
             gunAnim.SetLayerWeight(1, 1);
             gunAnim.transform.localPosition = new Vector2(0, 0);
-            if (Input.GetMouseButtonDown(0) || ((wepIndex == 3 || wepIndex == 10) && Input.GetMouseButton(0))){
+            if (Input.GetMouseButtonDown(0) || ((wepIndex == 3 || wepIndex == 10) && Input.GetMouseButton(0)))
+            {
+                if (Time.timeScale > 0.5f){
                 if (FindObjectOfType<WeaponsAnim>().playerAmmo > 0)
-                gunAnim.Play(gunName + "Fire");
+                    gunAnim.Play(gunName + "Fire");
                 Debug.Log("SHOOT");
+                }
             }
-            else if (gunName == "Sniper" && Input.GetMouseButton(1))
+            else if (gunName == "Sniper" && Input.GetKey(PlayerPrefs.GetString("MeleeKeybind")))
             {
                 if (FindObjectOfType<SniperEnableObject>())
                 {
@@ -268,7 +273,7 @@ public class PlayerAnimations : MonoBehaviour
             }
         }
         gunAnim.SetBool("Fire", Input.GetMouseButton(0));
-        gunAnim.SetBool("Scope", Input.GetMouseButton(1));
+        gunAnim.SetBool("Scope", Input.GetKey(PlayerPrefs.GetString("MeleeKeybind")));
     }
     public void equipGun(int gun)
     {

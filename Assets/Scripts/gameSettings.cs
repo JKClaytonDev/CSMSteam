@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class gameSettings : MonoBehaviour
 {
+    public Toggle toggleRun;
+    public Toggle shiftWalk;
     public Slider s;
     public Text SliderText;
     public Slider GraphicsSlider;
@@ -34,6 +36,10 @@ public class gameSettings : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        toggleRun.GetComponent<Toggle>().isOn = PlayerPrefs.GetInt("ShiftWalk") == 1;
+        shiftWalk.GetComponent<Toggle>().isOn = PlayerPrefs.GetInt("ToggleRun") == 1;
+
+
         if (!PlayerPrefs.HasKey("FOV"))
             PlayerPrefs.SetFloat("FOV", 90);
         FOV.value = PlayerPrefs.GetFloat("FOV");
@@ -43,7 +49,7 @@ public class gameSettings : MonoBehaviour
             PlayerPrefs.SetFloat("MouseSens", 10);
         s.value = PlayerPrefs.GetFloat("MouseSens");
         if (VolumeSlider)
-        VolumeSlider.value = AudioListener.volume * 100;
+        VolumeSlider.value = PlayerPrefs.GetFloat("vol") * 100;
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -72,7 +78,8 @@ public class gameSettings : MonoBehaviour
     }
     void OnEnable()
     {
-        
+        AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        volumeSlider.value = PlayerPrefs.GetFloat("vol");
         resolutionDropdown.captionText.text = Screen.currentResolution.ToString();
         qualityDropdown.captionText.text = qualityDropdown.options[ QualitySettings.GetQualityLevel() ].text+"";
     }
@@ -90,12 +97,25 @@ public class gameSettings : MonoBehaviour
     {
 
     }
+    public void setVol(float f)
+    {
+        if (f == 199)
+            return;
+        Debug.Log("SET VOLUME TO " + f);
+        PlayerPrefs.SetFloat("vol", f);
+        PlayerPrefs.Save();
+        AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (VolumeSlider)
-        AudioListener.volume = VolumeSlider.value/100;
+        AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        volumeSlider.value = PlayerPrefs.GetFloat("vol");
+        if (VolumeSliderText)
         VolumeSliderText.text = Mathf.Round(VolumeSlider.value)+"";
+        if (SliderText)
         SliderText.text = Mathf.Round(s.value) + "";
         PlayerPrefs.SetFloat("MouseSens", s.value);
         PlayerPrefs.Save();
@@ -148,5 +168,24 @@ public class gameSettings : MonoBehaviour
     public void toggleFullscreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
+    }
+    public void setToggleRun(bool bIn)
+    {
+        int i = 0;
+        if (bIn)
+        {
+            i = 1;
+        }
+        PlayerPrefs.SetInt("ToggleRun", i);
+        PlayerPrefs.Save();
+    }
+    public void setShiftWalk(bool bIn)
+    {
+        int i = 0;
+        if (bIn){
+            i = 1;
+        }
+        PlayerPrefs.SetInt("ShiftWalk", i);
+        PlayerPrefs.Save();
     }
 }

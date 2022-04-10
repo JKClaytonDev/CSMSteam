@@ -162,6 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1019359974}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1001 &325507536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3861,18 +3863,18 @@ MonoBehaviour:
   currentHealth: 1
   damages:
   - 0
-  - 0.005333332
-  - 0.002666666
-  - 0.002666666
-  - 0.002666666
-  - 0.005333332
-  - 0.003733334
-  - 0.005333332
-  - 0.002133334
-  - 0.005333332
-  - 0.005333332
-  - 0.005333332
-  - 0.005333332
+  - 0.0010666664
+  - 0.0005333332
+  - 0.0005333332
+  - 0.0005333332
+  - 0.0010666664
+  - 0.0007466668
+  - 0.0010666664
+  - 0.0004266668
+  - 0.0010666664
+  - 0.0010666664
+  - 0.0010666664
+  - 0.0010666664
   bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
   hitSound: {fileID: 0}
   bloodTime: 0.5
@@ -4200,6 +4202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 252612157}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1 &1288677541
 GameObject:
   m_ObjectHideFlags: 0

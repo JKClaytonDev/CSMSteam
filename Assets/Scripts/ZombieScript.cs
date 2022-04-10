@@ -50,7 +50,7 @@ public class ZombieScript : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(sounds[Random.Range(1, 4)]);
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) < 3)
+        if (Vector3.Distance(transform.position, player.transform.position) < 3 && Time.timeScale > 0.5f)
         {
             FindObjectOfType<UniversalAudio>().scratch();
             FindObjectOfType<PlayerVoices>().Pain();

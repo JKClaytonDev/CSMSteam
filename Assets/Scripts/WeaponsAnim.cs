@@ -197,6 +197,8 @@ public class WeaponsAnim : MonoBehaviour
     }
     void fire(Vector2 cbp)
     {
+        if (PlayerPrefs.GetInt("MasterQuest") == 1 && PlayerPrefs.GetInt("Missions") != 1)
+            cbp.x *= -1;
         if (Time.realtimeSinceStartup < whipTime)
             return;
         Debug.Log("FIRE");

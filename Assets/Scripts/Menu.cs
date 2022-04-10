@@ -11,14 +11,22 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("MeleeKeybind"))
+        {
+            PlayerPrefs.SetString("JumpKeybind", "space");
+            PlayerPrefs.SetString("RunKeybind", "left shift");
+            PlayerPrefs.SetString("FlashlightKeybind", "e");
+            PlayerPrefs.SetString("GhostKeybind", "f");
+            PlayerPrefs.SetString("WhipKeybind", "v");
+            PlayerPrefs.SetString("MeleeKeybind", "mouse 1");
+        }
         if (SceneManager.GetActiveScene().name.Contains("Menu"))
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        if (PlayerPrefs.GetFloat("vol") == 0)//volume
+        if (!PlayerPrefs.HasKey("vol"))//volume
             PlayerPrefs.SetFloat("vol", 1);
-        AudioListener.volume = PlayerPrefs.GetFloat("vol");
         menu.name = "asdfasd fasdfasdfasdfasdfsda fasdf sadf asdf sadf asdfsad f";
         menu.SetActive(false);
         active = false;
@@ -28,14 +36,13 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(s);
     }
-    public void setSens(System.Single value)
+    public void setSens(float value)
     {
         PlayerPrefs.SetFloat("Mouse", value);
     }
-    public void setVol(System.Single value)
+    public void setVol(float value)
     {
         PlayerPrefs.SetFloat("vol", value);
-        AudioListener.volume = value;
     }
     public void fullscreen()
     {

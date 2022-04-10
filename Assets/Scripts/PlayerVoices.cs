@@ -99,7 +99,7 @@ public class PlayerVoices : MonoBehaviour
     }
     public void Pain()
     {
-        if (Random.Range(1, 100) > 100 - ((100 - 35) * multiplier))
+        if (Random.Range(1, 100) > 100 - ((100 - 55) * multiplier))
         {
             PlayClip(painSounds);
         }

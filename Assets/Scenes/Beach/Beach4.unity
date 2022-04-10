@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 44640, g: 4329.1133, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 44640, g: 4329.7764, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1954,7 +1954,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66426
+  m_Name: pb_Mesh287490
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7150,6 +7150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 742356880}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1001 &984728344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7224,7 +7226,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66414
+  m_Name: pb_Mesh287478
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7585,18 +7587,18 @@ MonoBehaviour:
   currentHealth: 1
   damages:
   - 0
-  - 0.04266664
-  - 0.008533328
-  - 0.04266664
-  - 0.05973336
-  - 0.08533332
-  - 0.08533332
-  - 0.08533332
-  - 0.08533332
-  - 0.08533332
-  - 0.08533332
-  - 0.08533332
-  - 0.034133345
+  - 0.0009481472
+  - 0.00018962954
+  - 0.0009481472
+  - 0.003982224
+  - 0.0006320986
+  - 0.005688888
+  - 0.001896296
+  - 0.001896296
+  - 0.001896296
+  - 0.001896296
+  - 0.001896296
+  - 0.0007585186
   bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
   hitSound: {fileID: 0}
   bloodTime: 0.5
@@ -7607,7 +7609,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66472
+  m_Name: pb_Mesh287560
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8666,6 +8668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1246748052}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1 &1949850669
 GameObject:
   m_ObjectHideFlags: 0

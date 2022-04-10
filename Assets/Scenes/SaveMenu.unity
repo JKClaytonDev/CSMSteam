@@ -20136,7 +20136,6 @@ GameObject:
   - component: {fileID: 2112361891}
   - component: {fileID: 2112361894}
   - component: {fileID: 2112361892}
-  - component: {fileID: 2112361895}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -20151,14 +20150,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112361890}
-  m_LocalRotation: {x: -0.040206958, y: 0.9556003, z: 0.23600118, w: 0.17179951}
-  m_LocalPosition: {x: -41.25101, y: -86.14314, z: 234.3916}
+  m_LocalRotation: {x: 0.024432564, y: 0.9667168, z: 0.23814987, w: -0.0902566}
+  m_LocalPosition: {x: -39.5, y: -82.4, z: 234.3916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3225796149744552076}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -27.701, y: 190.6, z: 0.275}
 --- !u!114 &2112361892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20308,7 +20307,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 555
-  field of view: 55.6
+  field of view: 35.4
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -20326,26 +20325,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!95 &2112361895
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112361890}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 087a7885ce39e2c4993d2baf74f3340e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2122514595
 GameObject:
   m_ObjectHideFlags: 0
@@ -32252,6 +32231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dff864783710cc48abb89a6f382c544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggleRun: {fileID: 0}
+  shiftWalk: {fileID: 0}
   s: {fileID: 173496045}
   SliderText: {fileID: 798042664}
   GraphicsSlider: {fileID: 0}
@@ -32263,6 +32244,8 @@ MonoBehaviour:
   textureDropdown: {fileID: 0}
   aaDropdown: {fileID: 0}
   volumeSlider: {fileID: 0}
+  FOV: {fileID: 0}
+  fovText: {fileID: 0}
 --- !u!224 &4911709860976639063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32458,7 +32441,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4c58373899b9c4091a42cd5dfac633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   cont: {fileID: 0}
+  Classic: {fileID: 0}
+  Hardcore: {fileID: 0}
+  BossRush: {fileID: 0}
+  Mirrors: {fileID: 0}
+  RandomMonsters: {fileID: 0}
 --- !u!114 &4911709861015052852
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
+    public bool skip;
+    public SoundManager s;
+    public bool finalRun;
+    bool running;
     public GameObject title;
     public Vector3 startSpawnPos;
     public GameObject flip;
@@ -73,7 +77,17 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        flipped = 1;
+        if (PlayerPrefs.GetInt("MasterQuest") == 1 && !(PlayerPrefs.GetInt("Missions") == 1 && PlayerPrefs.GetInt("BossRush") == 0))
+            flipped = -1;
+        flip.SetActive(PlayerPrefs.GetInt("MasterQuest") == 1 && !(PlayerPrefs.GetInt("Missions") == 1 && PlayerPrefs.GetInt("BossRush") == 0));
+        sens = PlayerPrefs.GetFloat("MouseSens") * flipped;
 
+        foreach (AudioReverbZone z in FindObjectsOfType<AudioReverbZone>())
+            Destroy(z);
+        if (s)
+            s.init();
+        transform.position += Vector3.up * 2;
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
@@ -96,8 +110,8 @@ public class PlayerMovement : MonoBehaviour
         if (!PlayerPrefs.HasKey("MouseSens"))
             PlayerPrefs.SetFloat("MouseSens", 10);
         startSpawnPos = transform.position;
-        flipped = 1;
-        flip.SetActive(PlayerPrefs.GetInt("MasterQuest") == 1 && PlayerPrefs.GetInt("Missions") != 1);
+        
+
         if (SceneManager.GetActiveScene().name == "MapEditor")
             PlayerPrefs.SetInt("Missions", 1);
         startTime = Time.realtimeSinceStartup + 0.1f;
@@ -113,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
                 if (PlayerPrefs.GetInt("Missions") != 1) { PlayerPrefs.Save(); }
             }
         }
-        sens = PlayerPrefs.GetFloat("MouseSens") * flipped;
+        
         mainCam = Camera.main;
         foreach (GameObject g in enableStart)
         {
@@ -151,6 +165,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        if (skip)
+            return;
+        Debug.Log("GET VOLUME " + PlayerPrefs.GetFloat("vol"));
         if (noClip)
         {
             if (hideCanvas.Length != 0)
@@ -163,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
             return;
         }
-        sens = PlayerPrefs.GetFloat("MouseSens") * flipped;
+        sens = PlayerPrefs.GetFloat("MouseSens");
         if (!Input.GetKey(PlayerPrefs.GetString("JumpKeybind")))
             jumpHeld = false;
         if (Time.realtimeSinceStartup < startTime + 0.5f)
@@ -201,9 +219,9 @@ public class PlayerMovement : MonoBehaviour
             wepCanvas.transform.localScale = new Vector3(1, 1, 1);
         flashCanvas.SetActive(!flashAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
         healImage.SetActive(Time.realtimeSinceStartup < healTime);
-        if (Input.GetMouseButtonDown(1) && knockCooldown > 0)
+        if (Input.GetKey(PlayerPrefs.GetString("MeleeKeybind")) && knockCooldown > 0)
         {
-            knockCooldown -= 30;
+            knockCooldown -= 20;
             FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().Play("Knock", 1);
             Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * 4, 8);
             foreach (Collider c in hitColliders)
@@ -299,7 +317,19 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(-transform.localEulerAngles.x, 0, 0);
         float vely = GetComponent<Rigidbody>().velocity.y;
         speed = 1;
-        if (Input.GetKey(PlayerPrefs.GetString("RunKeybind")))
+        if (PlayerPrefs.GetInt("ToggleRun") == 1)
+        {
+            if (Input.GetKeyDown(PlayerPrefs.GetString("RunKeybind")))
+            running = !running;
+        }
+        else
+        {
+            running = Input.GetKey(PlayerPrefs.GetString("RunKeybind"));
+        }
+            finalRun = running;
+        if (PlayerPrefs.GetInt("ShiftWalk") == 1)
+            finalRun = !running;
+        if (finalRun)
         {
             justPressed = true;
                speed = 2;
@@ -325,7 +355,7 @@ public class PlayerMovement : MonoBehaviour
         moveDir.y = 0;
         if (moveDir != new Vector3() && Time.realtimeSinceStartup > footstepTime)
         {
-            footstepTime = Time.realtimeSinceStartup + 1.3f;
+            footstepTime = Time.realtimeSinceStartup + 1.3f/(speed/1.5f);
             GetComponent<AudioSource>().pitch = Random.Range(0.95f, 1.15f);
             GetComponent<AudioSource>().PlayOneShot(footstepSounds[Random.Range(1, footstepSounds.Length)]);
         }

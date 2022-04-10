@@ -56,7 +56,7 @@ public class PlayerDoll : MonoBehaviour
     {
 
         
-        if (textIndex >= imageIndexes.Length)
+        if (textIndex >= imageIndexes.Length || PlayerPrefs.GetInt("Missions") == 1 || PlayerPrefs.GetInt("BossRush") == 1)
         {
             if (FindObjectOfType<MusicManager>())
             {
@@ -67,7 +67,7 @@ public class PlayerDoll : MonoBehaviour
             Time.timeScale = 1;
         }
 
-        if ((Input.GetKeyDown(PlayerPrefs.GetString("JumpKeybind")) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
+        if ((Input.GetKeyDown(KeyCode.Space) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
         {
             textIndex++;
             if (imageIndexes[textIndex] == dollSprite)

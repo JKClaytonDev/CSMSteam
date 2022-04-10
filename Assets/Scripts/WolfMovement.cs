@@ -32,8 +32,7 @@ public class WolfMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        Physics.gravity = new Vector3(0, -100, 0);
+        Physics.gravity = Vector3.up * -99;
         if (PlayerPrefs.GetFloat("Mouse") == 0)
             PlayerPrefs.SetFloat("Mouse", 1);
        
@@ -50,6 +49,7 @@ public class WolfMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        child.GetComponent<Camera>().fieldOfView = 90;
         if (ammo < 0)
             ammo = 0;
         idle.gameObject.GetComponent<RectTransform>().localPosition = new Vector2((Mathf.Sin(transform.position.x/ 5) + Mathf.Cos(transform.position.z/5))*30, -386 + (Mathf.Cos(transform.position.x/10) + Mathf.Sin(transform.position.z/10) - 2) * 10);

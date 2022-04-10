@@ -1203,7 +1203,7 @@ Transform:
   - {fileID: 8927464700159996118}
   - {fileID: 1929799025}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5012993458852972340
 MeshFilter:
@@ -1280,6 +1280,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9718db089a9a1e4fb29dc01d4801c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossLevels:
+  - Castle3
+  - Farm4
+  - Rain4
+  - Snow4
+  - City4
+  - Forest4
+  - Sewer4
+  - Carnival4
+  - Hotel4
+  - SpaceStation4
+  - Beach4
+  - Cabin4
+  - Swamp4
+  - Resort4
+  - FinalBoss
+  - EndScene
   setHub: 0
   customString: 
   wepNames:

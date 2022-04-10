@@ -30,6 +30,7 @@ public class MaxHealthIncrease : MonoBehaviour
         Debug.Log("HIT HEART2 ");
         if (other.name.Contains("Player"))
         {
+
             FindObjectOfType<PlayerMovement>().GetComponent<AudioSource>().PlayOneShot(sound);
             Debug.Log("HIT HEART");
             PlayerPrefs.SetInt("FoundHeart"+SceneManager.GetActiveScene().name, 1);

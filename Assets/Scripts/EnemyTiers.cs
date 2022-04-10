@@ -14,7 +14,7 @@ public class EnemyTiers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!(PlayerPrefs.GetInt("MasterQuest") == 1 && PlayerPrefs.GetInt("Missions") != 1))
+        if (PlayerPrefs.GetInt("RandomMonsters") != 1)
         {
             Destroy(gameObject);
             return;
@@ -24,12 +24,6 @@ public class EnemyTiers : MonoBehaviour
 
             Destroy(gameObject);
             return;
-        }
-        if (PlayerPrefs.GetInt("Missions") != 1)
-        {
-            Destroy(gameObject);
-            return;
-            
         }
         allEnemies = FindObjectsOfType<GameObject>();
         foreach (GameObject h in allEnemies)

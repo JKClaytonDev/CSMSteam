@@ -14,6 +14,41 @@ public class YouDied : MonoBehaviour
     }
     private void OnEnable()
     {
+        if (PlayerPrefs.GetInt("HardcoreMode") == 1)
+        {
+            string oldRunKeybind = PlayerPrefs.GetString("RunKeybind");
+            string oldJumpKeybind = PlayerPrefs.GetString("JumpKeybind");
+            string oldFlashlightKeybind = PlayerPrefs.GetString("FlashlightKeybind");
+            string oldGhostKeybind = PlayerPrefs.GetString("GhostKeybind");
+            string oldWhipKeybind = PlayerPrefs.GetString("WhipKeybind");
+            string oldMeleeKeybind = PlayerPrefs.GetString("MeleeKeybind");
+            float oldmusicvol = PlayerPrefs.GetFloat("MusicVolume");
+            float oldvoicevol = PlayerPrefs.GetFloat("VoiceVolume");
+            float oldvol = PlayerPrefs.GetFloat("vol");
+            float oldFOV = PlayerPrefs.GetFloat("FOV");
+            int toggleRun = PlayerPrefs.GetInt("ToggleRun");
+            int shiftWalk = PlayerPrefs.GetInt("ShiftWalk");
+
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("Lives", 5);
+
+            PlayerPrefs.SetString("RunKeybind", oldRunKeybind);
+            PlayerPrefs.SetString("JumpKeybind", oldJumpKeybind);
+            PlayerPrefs.SetString("FlashlightKeybind", oldFlashlightKeybind);
+            PlayerPrefs.SetString("GhostKeybind", oldGhostKeybind);
+            PlayerPrefs.SetString("WhipKeybind", oldWhipKeybind);
+            PlayerPrefs.SetString("MeleeKeybind", oldMeleeKeybind);
+            PlayerPrefs.SetFloat("FOV", oldFOV);
+            PlayerPrefs.SetFloat("MusicVolume", oldmusicvol);
+            PlayerPrefs.SetFloat("VoiceVolume", oldvoicevol);
+            PlayerPrefs.SetFloat("vol", oldvol);
+            PlayerPrefs.SetInt("ToggleRun", toggleRun);
+            PlayerPrefs.SetInt("ShiftWalk", shiftWalk);
+            if (PlayerPrefs.GetInt("Missions") != 1) { PlayerPrefs.Save(); }
+            SceneManager.LoadScene("Menu");
+        }
+        if (SceneManager.GetActiveScene().name == "FinalCastle1")
+            SceneManager.LoadScene("Hub1");
         foreach (Canvas c in FindObjectsOfType<Canvas>())
         {
             if (c!= attached)

@@ -45213,7 +45213,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-36460
+  m_Name: pb_Mesh-179436
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -51250,7 +51250,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh47038
+  m_Name: pb_Mesh250116
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -55826,6 +55826,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 817734740773844378, guid: a41e6dece68945e46b8c058508826063, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2443427270338601575, guid: a41e6dece68945e46b8c058508826063, type: 3}
       propertyPath: m_Name
       value: Player

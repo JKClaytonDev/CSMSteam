@@ -29,6 +29,7 @@ public class KeyBindings : MonoBehaviour
         PlayerPrefs.SetString("FlashlightKeybind", "e");
         PlayerPrefs.SetString("GhostKeybind", "f");
         PlayerPrefs.SetString("WhipKeybind", "v");
+        PlayerPrefs.SetString("MeleeKeybind", "mouse 1");
         foreach (SetKeyBinding e in FindObjectsOfType<SetKeyBinding>())
             e.Reset();
     }

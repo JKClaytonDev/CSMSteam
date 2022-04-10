@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorLoadScene : MonoBehaviour
 {
+    public string[] bossLevels;
     public bool setHub;
     public string customString;
     public string[] wepNames = { "NULL", "Deagle", "Shotgun", "DualPistols", "Crossbow", "AlienPistol", "RocketLauncher", "Axe", "Trident", "Whip", "SMG", "Sniper", "Voodoo" };
@@ -24,6 +25,18 @@ public class DoorLoadScene : MonoBehaviour
     }
     public void nextLevel()
     {
+        if (PlayerPrefs.GetInt("BossRush") == 1)
+        {
+
+            for (int i = 0; i<bossLevels.Length; i++)
+            {
+                if (bossLevels[i] == SceneManager.GetActiveScene().name)
+                {
+                    SceneManager.LoadScene(bossLevels[i + 1]);
+                    return;
+                }
+            }
+        }
         foreach (enemyHealth h in FindObjectsOfType<enemyHealth>())
         {
             h.gameObject.SetActive(false);
@@ -42,6 +55,7 @@ public class DoorLoadScene : MonoBehaviour
                 SceneManager.LoadScene("Menu");
             return;
         }
+        if (FindObjectOfType<PlayerMovement>())
         PlayerPrefs.SetFloat("Money", FindObjectOfType<PlayerMovement>().money);
         if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name) == 0)
         {
@@ -62,6 +76,7 @@ public class DoorLoadScene : MonoBehaviour
             foreach (enemyHealth h in FindObjectsOfType<enemyHealth>())
                 Destroy(h.gameObject);
             cam.SetActive(true);
+            if (FindObjectOfType<PlayerMovement>())
             Destroy(FindObjectOfType<PlayerMovement>().gameObject);
         }
         else

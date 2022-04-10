@@ -8,7 +8,7 @@ public class EscapeMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("Menu");
             this.enabled = false;

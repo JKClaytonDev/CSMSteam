@@ -19,9 +19,13 @@ public class billboardOBJ : MonoBehaviour
     public bool lockY;
     public bool lockZ;
     public bool mmc;
+    bool classic;
     // Start is called before the first frame update
     void Start()
     {
+        classic = FindObjectOfType<WolfMovement>();
+        if (FindObjectOfType<WolfMovement>())
+            player = FindObjectOfType<WolfMovement>().gameObject;
         if (FindObjectOfType<MapMakerCamera>())
         {
             mmc = true;
@@ -35,12 +39,25 @@ public class billboardOBJ : MonoBehaviour
         if (removeParent)
             transform.parent = null;
         startRot = transform.localEulerAngles;
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        
+        if (FindObjectOfType<WolfMovement>())
+            player = FindObjectOfType<WolfMovement>().gameObject;
+        else
+            player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (classic)
+        {
+            player = Camera.main.gameObject;
+        }
+        if (player == null)
+        {
+            if (!FindObjectOfType<PlayerMovement>())
+                player = FindObjectOfType<WolfMovement>().gameObject;
+        }
         if (mmc)
         {
             player = Camera.main.gameObject;
