@@ -42,7 +42,7 @@ public class MantisScript : MonoBehaviour
         if (Time.realtimeSinceStartup > biteTime)
         {
             if (Vector3.Distance(transform.position, player.transform.position) < 10)
-            FindObjectOfType<playerHealth>().health -= 50;
+            FindObjectOfType<playerHealth>().health -= 30;
             biteTime = Time.realtimeSinceStartup + 0.6f;
         }
     }

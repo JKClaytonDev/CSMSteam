@@ -5063,6 +5063,7 @@ MonoBehaviour:
   customUpdate: 1
   framePriority: 0
   offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
   lockX: 0
   lockY: 0
   lockZ: 0
@@ -10326,7 +10327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1995067743
 Transform:
   m_ObjectHideFlags: 0
@@ -10355,9 +10356,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 259490880
-  m_Range: 255555
-  m_SpotAngle: 30
+  m_Intensity: 12117191
+  m_Range: 2555555
+  m_SpotAngle: 84
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -10403,7 +10404,7 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
+  m_ShadowRadius: 3.52
   m_ShadowAngle: 0
 --- !u!114 &1995067744
 MonoBehaviour:
@@ -10417,10 +10418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 55555556
+  m_Intensity: 19555556
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 0
+  m_InnerSpotPercent: 13.1
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 0
@@ -10433,7 +10434,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.025
+  m_ShapeRadius: 3.52
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 30
@@ -10822,6 +10823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c4d6c5dcf23c546a18044f52faa15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlit: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  lit: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  defaultTex: {fileID: 2800000, guid: c937d2005f4fc174e9b5a0ad881f9828, type: 3}
 --- !u!114 &7106876235629506441
 MonoBehaviour:
   m_ObjectHideFlags: 0

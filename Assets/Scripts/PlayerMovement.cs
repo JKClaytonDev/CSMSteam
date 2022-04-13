@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
+    float checkTime;
     public bool skip;
     public SoundManager s;
     public bool finalRun;
@@ -77,6 +78,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        if (FindObjectOfType<billboardOBJ>())
+        {
+            foreach (billboardOBJ o in FindObjectsOfType<billboardOBJ>()) {
+                o.initBBJ();
+                o.setPlayer(gameObject);
+        }
+        }
         flipped = 1;
         if (PlayerPrefs.GetInt("MasterQuest") == 1 && !(PlayerPrefs.GetInt("Missions") == 1 && PlayerPrefs.GetInt("BossRush") == 0))
             flipped = -1;
@@ -165,11 +173,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        if (Time.realtimeSinceStartup > checkTime)
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
+        }
         if (skip)
             return;
-        Debug.Log("GET VOLUME " + PlayerPrefs.GetFloat("vol"));
-        if (noClip)
+        
+            if (noClip)
         {
             if (hideCanvas.Length != 0)
             {
@@ -181,7 +192,11 @@ public class PlayerMovement : MonoBehaviour
             transform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
             return;
         }
-        sens = PlayerPrefs.GetFloat("MouseSens");
+        if (Time.realtimeSinceStartup > checkTime)
+        {
+            sens = PlayerPrefs.GetFloat("MouseSens");
+            checkTime = Time.realtimeSinceStartup + 0.1f;
+        }
         if (!Input.GetKey(PlayerPrefs.GetString("JumpKeybind")))
             jumpHeld = false;
         if (Time.realtimeSinceStartup < startTime + 0.5f)

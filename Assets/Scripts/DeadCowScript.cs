@@ -17,12 +17,13 @@ public class DeadCowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!player)
+            player = FindObjectOfType<PlayerMovement>().gameObject;
         if (Vector3.Distance(transform.position, player.transform.position) < distance)
         {
             guts.SetActive(true);
             gameObject.SetActive(false);
         }
-        if (!player)
-            player = FindObjectOfType<PlayerMovement>().gameObject;
+        
     }
 }

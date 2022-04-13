@@ -9,7 +9,7 @@ public class ClownBallSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ballTime = Time.realtimeSinceStartup + Random.Range(5, 2);
+        ballTime = Time.realtimeSinceStartup + Random.Range(7, 4);
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class ClownBallSpawner : MonoBehaviour
     {
         if (Time.realtimeSinceStartup > ballTime)
         {
-            ballTime = Time.realtimeSinceStartup + Random.Range(5, 2);
+            ballTime = Time.realtimeSinceStartup + Random.Range(6, 4);
             GameObject b = Instantiate(ball);
             Vector3 dir = -transform.forward;
             b.transform.position = transform.position + dir * 10;

@@ -5,7 +5,8 @@ using UnityEngine;
 public class AmmoBox : MonoBehaviour
 {
     public AudioClip sound;
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.name.Contains("Player"))
         {

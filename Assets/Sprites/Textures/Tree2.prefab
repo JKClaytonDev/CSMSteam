@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 104
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 48.603}
 --- !u!33 &876004150996675613
 MeshFilter:
@@ -105,6 +105,7 @@ MonoBehaviour:
   lockX: 0
   lockY: 0
   lockZ: 0
+  mmc: 0
 --- !u!136 &1123379575398273432
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class billboardOBJ : MonoBehaviour
     public int customUpdate = 1;
     public bool framePriority;
     public Vector3 offset = new Vector3(0, -90, 0);
-    GameObject player;
+    public GameObject player;
     bool canTurn;
     Vector3 startPos;
     public bool lockX;
@@ -20,12 +20,11 @@ public class billboardOBJ : MonoBehaviour
     public bool lockZ;
     public bool mmc;
     bool classic;
-    // Start is called before the first frame update
-    void Start()
+    public void initBBJ()
     {
+        
+        Debug.Log("INIT " + Time.frameCount);
         classic = FindObjectOfType<WolfMovement>();
-        if (FindObjectOfType<WolfMovement>())
-            player = FindObjectOfType<WolfMovement>().gameObject;
         if (FindObjectOfType<MapMakerCamera>())
         {
             mmc = true;
@@ -39,38 +38,31 @@ public class billboardOBJ : MonoBehaviour
         if (removeParent)
             transform.parent = null;
         startRot = transform.localEulerAngles;
-        
-        if (FindObjectOfType<WolfMovement>())
-            player = FindObjectOfType<WolfMovement>().gameObject;
-        else
-            player = FindObjectOfType<PlayerMovement>().gameObject;
+        player = Camera.main.gameObject;
+    }
+    public void setPlayer(GameObject p)
+    {
+        player = p;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        initBBJ();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (classic)
-        {
-            player = Camera.main.gameObject;
-        }
-        if (player == null)
-        {
-            if (!FindObjectOfType<PlayerMovement>())
-                player = FindObjectOfType<WolfMovement>().gameObject;
-        }
-        if (mmc)
-        {
-            player = Camera.main.gameObject;
-        }
-        if (closePlayerObject)
-            player = closePlayerObject.attachedPlayer;
-        if (!player)
-            return;
-        
         startPos = transform.position;
         if (framePriority)
         {
-            transform.LookAt(player.transform);
+            try {
+                transform.LookAt(player.transform);
+            }
+            catch
+            {
+                player = Camera.main.gameObject;
+            }
             transform.Rotate(offset);
             Vector3 angles = transform.localEulerAngles;
             if (lockX)
@@ -81,7 +73,7 @@ public class billboardOBJ : MonoBehaviour
                 angles.z = startRot.z;
             transform.localEulerAngles = angles;
             return;
-        }
+            }
         if (Time.frameCount % customUpdate != 0)
             return;
         Vector3 pos = player.transform.position - player.transform.forward * 3;

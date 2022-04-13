@@ -19,6 +19,9 @@ public class playerHealth : MonoBehaviour
     public float maxHealth;
     public GameObject heartImage;
     public GameObject[] heartImages;
+    float lastSavedHealth;
+    float iframeTime;
+    float lockhealth;
     private void Start()
     {
         startTime = Time.realtimeSinceStartup;
@@ -30,6 +33,7 @@ public class playerHealth : MonoBehaviour
         ReRender();
         health = 50;
     }
+
     public void ReRender()
     {
         maxHealth = PlayerPrefs.GetFloat("MaxHealth");
@@ -56,6 +60,16 @@ public class playerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.realtimeSinceStartup < iframeTime)
+        {
+            health = lockhealth;
+        }
+        else if (Mathf.Abs(lastSavedHealth-health) > 30)
+        {
+            lastSavedHealth = health;
+            iframeTime = Time.realtimeSinceStartup + 1;
+            lockhealth = health;
+        }
         for (int i = 0; i < maxHealth; i += 10)
         {
             heartImages[i / 10].GetComponent<Image>().sprite = fullSprite;
