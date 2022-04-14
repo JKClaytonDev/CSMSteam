@@ -397,7 +397,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &93805206
 GameObject:
@@ -28869,7 +28869,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101891331
 GameObject:
@@ -28951,124 +28951,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101891331}
   m_CullTransparentMesh: 1
---- !u!1001 &111960632
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (15)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
---- !u!1001 &147122706
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 261.92023
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 94.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (11)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &201232444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29280,18 +29162,18 @@ MonoBehaviour:
   currentHealth: 1
   damages:
   - 0
-  - 0.00014222228
-  - 0.00011851854
-  - 0.0007111114
-  - 0.00011851854
-  - 0.0004977778
+  - 0.0002844446
+  - 0.000711111
+  - 0.0014222228
   - 0.000237037
-  - 0.0014222214
-  - 0.000237037
-  - 0.0004740738
+  - 0.0009955555
+  - 0.000474074
+  - 0.002844442
+  - 0.000474074
+  - 0.0009481476
   - 0.00009481476
-  - 0.0004740738
-  - 0.0004740738
+  - 0.0009481476
+  - 0.0009481476
   bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
   hitSound: {fileID: 0}
   bloodTime: 0.5
@@ -29476,65 +29358,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df1ba8f79d1b4344ac09abc4c775f92, type: 3}
---- !u!1001 &205506786
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (14)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &310167536
 GameObject:
   m_ObjectHideFlags: 0
@@ -29870,65 +29693,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
---- !u!1001 &444524407
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 228.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 19.610884
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 59.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &468148522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30002,7 +29766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30094,7 +29858,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &600041623
 PrefabInstance:
@@ -30114,7 +29878,7 @@ PrefabInstance:
       objectReference: {fileID: 201232445}
     - target: {fileID: 7293892138276768686, guid: 92b81ab8fada95842b8f98d048c94bf1, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7293892138276768686, guid: 92b81ab8fada95842b8f98d048c94bf1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30283,7 +30047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1597696
+  m_Name: pb_Mesh30346
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -30728,67 +30492,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!1001 &1009136103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 97.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (17)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &1018444743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31013,7 +30718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31072,7 +30777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31197,65 +30902,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084822559}
   m_CullTransparentMesh: 1
---- !u!1001 &1163920039
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 179.91772
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.853975
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 74.91683
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &1192294504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31320,183 +30966,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2443427270338601579, guid: a41e6dece68945e46b8c058508826063, type: 3}
   m_PrefabInstance: {fileID: 1192294504}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1221575240
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 226.63773
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21.42933
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 32.34568
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
---- !u!1001 &1243938415
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 281.72284
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.511124
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 77.24171
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
---- !u!1001 &1292706602
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 179.66087
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.853975
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 52.104256
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &1391067569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36393,7 +35862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36486,65 +35955,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1522029433
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 280.5046
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.953843
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 94.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &1573327079
 GameObject:
   m_ObjectHideFlags: 0
@@ -36599,124 +36009,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1617503708
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 261.92023
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 94.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (10)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
---- !u!1001 &1628576939
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 236.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.34972
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 80.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &1631631003
 GameObject:
   m_ObjectHideFlags: 0
@@ -41540,124 +40832,6 @@ Transform:
   m_Father: {fileID: 2034691662}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!1001 &1658116447
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 19.894693
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 34.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
---- !u!1001 &1686283953
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 97.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (16)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &1696575710
 GameObject:
   m_ObjectHideFlags: 0
@@ -41691,7 +40865,7 @@ Transform:
   - {fileID: 1192294505}
   - {fileID: 1573327080}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1735529287
 PrefabInstance:
@@ -41811,65 +40985,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
---- !u!1001 &1784407139
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 201.56468
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 27.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 77.56946
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &1834574778
 GameObject:
   m_ObjectHideFlags: 0
@@ -41981,65 +41096,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834574778}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1838998672
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 201.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 22.88671
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 52.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1 &1855163024
 GameObject:
   m_ObjectHideFlags: 0
@@ -42294,7 +41350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5765340202345591936, guid: e419d33d1d5d77840b4765836b3a263b, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 5765340202345591936, guid: e419d33d1d5d77840b4765836b3a263b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42628,65 +41684,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &2011884402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 261.92023
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (12)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &2018988559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42701,7 +41698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42857,65 +41854,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &2051949921
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_RootOrder
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 261.92023
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 31.692728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658954, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3297644065842658955, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
-      propertyPath: m_Name
-      value: SpiderSpawnDeadCow (13)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e05633fa009d1144b962ef58984c64e, type: 3}
 --- !u!1001 &2088385693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42930,7 +41868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4902204794035670158, guid: 9963b288d075d7c4d8654f7ea07a6117, type: 3}
       propertyPath: m_LocalPosition.x

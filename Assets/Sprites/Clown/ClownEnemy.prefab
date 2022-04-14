@@ -71,6 +71,7 @@ MonoBehaviour:
   customUpdate: 1
   framePriority: 0
   offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
   lockX: 0
   lockY: 0
   lockZ: 0
@@ -478,7 +479,7 @@ Transform:
   m_Children:
   - {fileID: 4048011762008741006}
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6806826734371400434
 MeshFilter:
@@ -541,7 +542,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6806826734371400439
 Rigidbody:
@@ -576,7 +577,7 @@ MonoBehaviour:
   mat:
   - {fileID: 2100000, guid: 83452885e2925c540abc0800057cebdc, type: 2}
   contains: 0
-  EnemySpeed: 3
+  EnemySpeed: 1
   distance: 50
   anim: {fileID: 4048011762008741007}
   customDamage: 2
