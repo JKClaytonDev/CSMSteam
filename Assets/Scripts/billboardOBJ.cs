@@ -20,9 +20,10 @@ public class billboardOBJ : MonoBehaviour
     public bool lockZ;
     public bool mmc;
     bool classic;
+    private Transform myTransform;
     public void initBBJ()
     {
-        
+        myTransform = transform;
         Debug.Log("INIT " + Time.frameCount);
         classic = FindObjectOfType<WolfMovement>();
         if (FindObjectOfType<MapMakerCamera>())
@@ -53,17 +54,17 @@ public class billboardOBJ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        startPos = transform.position;
+        startPos = myTransform.position;
         if (framePriority)
         {
             try {
-                transform.LookAt(player.transform);
+                myTransform.LookAt(player.transform);
             }
             catch
             {
                 player = Camera.main.gameObject;
             }
-            transform.Rotate(offset);
+            myTransform.Rotate(offset);
             Vector3 angles = transform.localEulerAngles;
             if (lockX)
                 angles.x = startRot.x;
@@ -71,21 +72,21 @@ public class billboardOBJ : MonoBehaviour
                 angles.y = startRot.y;
             if (lockZ)
                 angles.z = startRot.z;
-            transform.localEulerAngles = angles;
+            myTransform.localEulerAngles = angles;
             return;
             }
         if (Time.frameCount % customUpdate != 0)
             return;
         Vector3 pos = player.transform.position - player.transform.forward * 3;
-        transform.LookAt(pos);
+        myTransform.LookAt(pos);
         if (customMap)
-            transform.LookAt(Camera.main.transform);
-        transform.Rotate(offset);
-        Vector3 rot = transform.localEulerAngles;
+            myTransform.LookAt(Camera.main.transform);
+        myTransform.Rotate(offset);
+        Vector3 rot = myTransform.localEulerAngles;
         rot.x = startRot.x;
         rot.z = startRot.z;
-        transform.localEulerAngles = rot + (autoRotate * Time.realtimeSinceStartup);
-        transform.position = startPos;
+        myTransform.localEulerAngles = rot + (autoRotate * Time.realtimeSinceStartup);
+        myTransform.position = startPos;
         
     }
 }

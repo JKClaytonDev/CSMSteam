@@ -62,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
     Camera mainCam;
     Vector3 velocity;
     float knockCooldown;
+
+    private Transform myTransform;
+
     public void checkTitle()
     {
         Debug.Log("TITLE IS " + PlayerPrefs.GetString("MenuWorldTitle"));
@@ -78,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        myTransform = transform;
         if (FindObjectOfType<billboardOBJ>())
         {
             foreach (billboardOBJ o in FindObjectsOfType<billboardOBJ>()) {
@@ -95,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(z);
         if (s)
             s.init();
-        transform.position += Vector3.up * 2;
+        myTransform.position += Vector3.up * 2;
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
@@ -117,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         knockCooldown = 0;
         if (!PlayerPrefs.HasKey("MouseSens"))
             PlayerPrefs.SetFloat("MouseSens", 10);
-        startSpawnPos = transform.position;
+        startSpawnPos = myTransform.position;
         
 
         if (SceneManager.GetActiveScene().name == "MapEditor")
@@ -142,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
             g.SetActive(true);
         }
         checkPowerUps();
-        MX = transform.localEulerAngles.y;
+        MX = myTransform.localEulerAngles.y;
         MY = 0;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -187,9 +191,9 @@ public class PlayerMovement : MonoBehaviour
                 foreach (Canvas c in hideCanvas)
                     c.enabled = false;
             }
-            GetComponent<Rigidbody>().velocity = 25 * (transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal") * flipped);
+            GetComponent<Rigidbody>().velocity = 25 * (transform.forward * Input.GetAxis("Vertical") + myTransform.right * Input.GetAxis("Horizontal") * flipped);
             GetComponent<Rigidbody>().useGravity = false;
-            transform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
+            myTransform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
             return;
         }
         if (Time.realtimeSinceStartup > checkTime)
@@ -202,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
         if (Time.realtimeSinceStartup < startTime + 0.5f)
         {
             if (SceneManager.GetActiveScene().name == "Hub1" && PlayerPrefs.HasKey("SpawnX") && PlayerPrefs.GetInt("ShardCount") != 0 && PlayerPrefs.GetFloat("SpawnX") != 0)
-                transform.position = new Vector3(PlayerPrefs.GetFloat("SpawnX"), PlayerPrefs.GetFloat("SpawnY"), PlayerPrefs.GetFloat("SpawnZ"));
+                myTransform.position = new Vector3(PlayerPrefs.GetFloat("SpawnX"), PlayerPrefs.GetFloat("SpawnY"), PlayerPrefs.GetFloat("SpawnZ"));
         }
         if (Input.GetKey(PlayerPrefs.GetString("JumpKeybind")) && !jumpHeld)
         {
@@ -238,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
         {
             knockCooldown -= 20;
             FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().Play("Knock", 1);
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * 4, 8);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position + myTransform.forward * 4, 8);
             foreach (Collider c in hitColliders)
             {
                 Debug.Log("WHIP ENEMY INSIDE");
@@ -291,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
         else
             moneyText.text = "$" + money;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit)) {
+        if (Physics.Raycast(transform.position, myTransform.forward, out hit)) {
             GameObject g = hit.transform.gameObject;
             if (g.GetComponent<enemyHealth>())
             {
@@ -328,8 +332,8 @@ public class PlayerMovement : MonoBehaviour
             rv = -1;
         }
         col.transform.eulerAngles = new Vector3();
-        Vector3 angles = transform.localEulerAngles;
-        transform.Rotate(-transform.localEulerAngles.x, 0, 0);
+        Vector3 angles = myTransform.localEulerAngles;
+        myTransform.Rotate(-transform.localEulerAngles.x, 0, 0);
         float vely = GetComponent<Rigidbody>().velocity.y;
         speed = 1;
         if (PlayerPrefs.GetInt("ToggleRun") == 1)
@@ -365,8 +369,8 @@ public class PlayerMovement : MonoBehaviour
         if (inIce)
             speed *= 1.2f;
         angles = new Vector3(0, MX, 0);
-        transform.localEulerAngles = angles;
-        Vector3 moveDir = (Input.GetAxis("Vertical") * transform.forward + Input.GetAxis("Horizontal") * flipped * transform.right);
+        myTransform.localEulerAngles = angles;
+        Vector3 moveDir = (Input.GetAxis("Vertical") * myTransform.forward + Input.GetAxis("Horizontal") * flipped * myTransform.right);
         moveDir.y = 0;
         if (moveDir != new Vector3() && Time.realtimeSinceStartup > footstepTime)
         {
@@ -387,7 +391,7 @@ public class PlayerMovement : MonoBehaviour
         MX += Input.GetAxis("Mouse X") * 6 * MSensM * rv * flipped * sens / 15;
         MY = Mathf.Min(60, Mathf.Max(-60, MY));
         angles = new Vector3(MY, MX, -Input.GetAxis("Horizontal"));
-        transform.localEulerAngles = angles;
+        myTransform.localEulerAngles = angles;
         
     }
 }
