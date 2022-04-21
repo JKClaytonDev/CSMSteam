@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 86.701004, g: 1365.2773, b: 149.69266, a: 1}
+  m_IndirectSpecularColor: {r: 86.682755, g: 1365.209, b: 149.67935, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18663,6 +18663,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpPad (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2146667804686184867, guid: ba25c6ae1d1e1b644822673c2395c677, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146667804686184872, guid: ba25c6ae1d1e1b644822673c2395c677, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1765673050}
     - target: {fileID: 2146667804686184879, guid: ba25c6ae1d1e1b644822673c2395c677, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -22373,7 +22381,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh133148
+  m_Name: pb_Mesh44952
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -36919,6 +36927,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6991212556095755088, guid: fc716ccd74794fb4a99a4fa469b034de, type: 3}
   m_PrefabInstance: {fileID: 1758912017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1765673050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2146667804686184867, guid: ba25c6ae1d1e1b644822673c2395c677, type: 3}
+  m_PrefabInstance: {fileID: 2146667805916898292}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1771703703
 PrefabInstance:

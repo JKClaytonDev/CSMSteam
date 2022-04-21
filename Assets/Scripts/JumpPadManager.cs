@@ -19,6 +19,7 @@ public class JumpPadManager : MonoBehaviour
     public GameObject activePad;
     public GameObject disabledPad;
     public GameObject volume;
+    float lockPosTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,13 @@ public class JumpPadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.realtimeSinceStartup < lockPosTime)
+        {
+            player.transform.position = target.transform.position + Vector3.up * 5;
+            attached = false;
+            player.GetComponent<Rigidbody>().velocity = new Vector3();
+        }
+
         activePad.SetActive(Time.realtimeSinceStartup > padTime);
         disabledPad.SetActive(Time.realtimeSinceStartup < padTime);
         volume.SetActive(attached);
@@ -42,12 +50,14 @@ public class JumpPadManager : MonoBehaviour
             playerDistance = Vector3.Distance(currentPos, target.transform.position);
             calcDistance = (fullDistance / 2)-Mathf.Abs((playerDistance- fullDistance/2));
             player.transform.position = currentPos + Vector3.up* calcDistance * 2;
-            if (Vector3.Distance(currentPos, target.transform.position) < 1)
+            if (Vector3.Distance(currentPos, target.transform.position) < 4)
             {
                 attached = false;
-                target.GetComponent<JumpPadManager>().padTime = Time.realtimeSinceStartup + 25;
                 player.GetComponent<AudioSource>().PlayOneShot(landSound);
-                player.GetComponent<Rigidbody>().velocity = Physics.gravity;
+                player.GetComponent<Rigidbody>().velocity = new Vector3();
+                player.transform.position = target.transform.position;
+                lockPosTime = Time.realtimeSinceStartup + 1;
+                return;
             }
         }
     }
@@ -60,6 +70,8 @@ public class JumpPadManager : MonoBehaviour
             return;
         if (other.gameObject.name.Contains("Player"))
         {
+            foreach (JumpPadManager m in FindObjectsOfType<JumpPadManager>())
+                m.padTime = Time.realtimeSinceStartup + 10;
             if (sound && player.GetComponent<AudioSource>())
                 player.GetComponent<AudioSource>().PlayOneShot(sound);
             padTime = Time.realtimeSinceStartup + 25;

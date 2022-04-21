@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 16.4
+    m_Value: 16.87
   multiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -45,16 +45,16 @@ MonoBehaviour:
     m_Value: 0
   top:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.019385941, b: 0, a: 1}
+    m_Value: {r: 0.5849056, g: 0, b: 0, a: 1}
   middle:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0, b: 0, a: 1}
+    m_Value: {r: 0.5283019, g: 0.002491996, b: 0.002491996, a: 1}
   bottom:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0, b: 0, a: 1}
   gradientDiffusion:
     m_OverrideState: 1
-    m_Value: 180.2
+    m_Value: 67.9
 --- !u!114 &-5884277390455237379
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -302,7 +302,7 @@ MonoBehaviour:
     m_Value: 200
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 35
+    m_Value: 75
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
