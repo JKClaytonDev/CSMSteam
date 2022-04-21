@@ -9,3 +9,7 @@ Key Features:
 - Over 60 levels, filled with action-packed combat and interesting story.
 - 15 different worlds to explore, recover crystal shards in space stations, abandoned snow research bases, spooky forests, and more
 - Choose which levels to play in any order, you have the freedom to pick from multiple worlds to complete in the hub world.
+
+![Alt text](http://full/path/to/img.jpg "Optional title")
+![Alt text](http://full/path/to/img.jpg "Optional title")
+![Alt text](http://full/path/to/img.jpg "Optional title")
