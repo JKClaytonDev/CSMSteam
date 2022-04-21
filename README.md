@@ -11,4 +11,3 @@ Key Features:
 - Choose which levels to play in any order, you have the freedom to pick from multiple worlds to complete in the hub world.
 
 ![Alt text](https://cdn.akamai.steamstatic.com/steam/apps/1870970/ss_d74031d9ef29bf71c14ada174c79e479a6c6c5af.1920x1080.jpg?t=1649536032)
-![Alt text](https://cdn.akamai.steamstatic.com/steam/apps/1870970/ss_d74031d9ef29bf71c14ada174c79e479a6c6c5af.1920x1080.jpg?t=1649536032)
