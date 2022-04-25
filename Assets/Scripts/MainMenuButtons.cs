@@ -140,11 +140,15 @@ public class MainMenuButtons : MonoBehaviour
             PlayerPrefs.SetInt("Missions", 1);
             PlayerPrefs.SetInt("BossRush", 1);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("Castle3");
+            PlayerPrefs.SetString("LoadingScreenScene", "Castle3");
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("LoadingScreen");
         }
         else
         {
-            SceneManager.LoadScene("IntroAnim");
+            PlayerPrefs.SetString("LoadingScreenScene", "IntroAnim");
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
 
@@ -153,7 +157,9 @@ public class MainMenuButtons : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("LockScene"))
         {
-            SceneManager.LoadScene(PlayerPrefs.GetString("LockScene"));
+            PlayerPrefs.SetString("LoadingScreenScene", PlayerPrefs.GetString("LockScene"));
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
     public void quitGame()

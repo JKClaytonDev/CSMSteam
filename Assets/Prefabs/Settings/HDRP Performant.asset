@@ -135,7 +135,7 @@ MonoBehaviour:
       lowResTransparencyMinimumThreshold: 25
       rayTracingHalfResThreshold: 0
     lowresTransparentSettings:
-      enabled: 1
+      enabled: 0
       checkerboardDepthBuffer: 1
       upsampleType: 1
     xrSettings:
@@ -179,21 +179,21 @@ MonoBehaviour:
       m_SchemaId:
         m_Id: With3Levels
     lightingQualitySettings:
-      AOStepCount: 030000000400000006000000
+      AOStepCount: 020000000200000002000000
       AOFullRes: 000000
-      AOMaximumRadiusPixels: 180000002000000020000000
+      AOMaximumRadiusPixels: 100000001000000010000000
       AOBilateralUpsample: 000000
-      AODirectionCount: 010000000100000002000000
-      ContactShadowSampleCount: 04000000060000000a000000
-      SSRMaxRaySteps: 080000001000000020000000
-      SSGIRaySteps: 200000004000000080000000
-      SSGIDenoise: 010101
-      SSGIHalfResDenoise: 010000
+      AODirectionCount: 010000000100000001000000
+      ContactShadowSampleCount: 040000000400000004000000
+      SSRMaxRaySteps: 000000000000000000000000
+      SSGIRaySteps: 000000000000000000000000
+      SSGIDenoise: 000000
+      SSGIHalfResDenoise: 000000
       SSGIDenoiserRadius:
-      - 0.75
-      - 0.5
-      - 0.5
-      SSGISecondDenoise: 010101
+      - 0
+      - 0
+      - 0
+      SSGISecondDenoise: 000000
       RTAORayLength:
       - 0.5
       - 3
@@ -205,52 +205,52 @@ MonoBehaviour:
       - 0.5
       - 0.65
       RTGIRayLength:
-      - 50
-      - 50
-      - 50
-      RTGIFullResolution: 000001
+      - 0.01
+      - 0.01
+      - 0.01
+      RTGIFullResolution: 000000
       RTGIClampValue:
-      - 0.5
-      - 0.8
-      - 1.5
-      RTGIRaySteps: 200000003000000040000000
-      RTGIDenoise: 010101
-      RTGIHalfResDenoise: 010000
+      - 0.001
+      - 0.001
+      - 0.001
+      RTGIRaySteps: 000000000000000000000000
+      RTGIDenoise: 000001
+      RTGIHalfResDenoise: 000000
       RTGIDenoiserRadius:
-      - 0.66
-      - 0.66
-      - 1
-      RTGISecondDenoise: 010101
+      - 0.001
+      - 0.001
+      - 0.001
+      RTGISecondDenoise: 000000
       RTRMinSmoothness:
-      - 0.6
-      - 0.4
+      - 0
+      - 0
       - 0
       RTRSmoothnessFadeStart:
-      - 0.7
-      - 0.5
+      - 0
+      - 0
       - 0
       RTRRayLength:
-      - 50
-      - 50
-      - 50
+      - 0.01
+      - 0.01
+      - 0.01
       RTRClampValue:
-      - 0.8
-      - 1
-      - 1.2
-      RTRFullResolution: 000001
-      RTRRayMaxIterations: 200000003000000040000000
-      RTRDenoise: 010101
-      RTRDenoiserRadius: 080000000c00000010000000
-      RTRSmoothDenoising: 010000
+      - 0.001
+      - 0.001
+      - 0.001
+      RTRFullResolution: 000000
+      RTRRayMaxIterations: 000000000000000000000000
+      RTRDenoise: 000000
+      RTRDenoiserRadius: 010000000100000010000000
+      RTRSmoothDenoising: 000000
       Fog_ControlMode: 000000000000000000000000
       Fog_Budget:
-      - 0.125
-      - 0.25
-      - 0.5
+      - 0
+      - 0
+      - 0
       Fog_DepthRatio:
-      - 0.5
-      - 0.5
-      - 0.5
+      - 0
+      - 0
+      - 0
     m_ObsoleteLightLayerName0: Light LayerDefault
     m_ObsoleteLightLayerName1: InteriorOnly
     m_ObsoleteLightLayerName2: ExteriorOnly

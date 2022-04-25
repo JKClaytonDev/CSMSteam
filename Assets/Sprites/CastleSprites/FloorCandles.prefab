@@ -33,7 +33,7 @@ Transform:
   - {fileID: 4250551487649753841}
   - {fileID: 8492980991090270599}
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4250551487033628810
 MeshFilter:
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4250551487033628821}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
 --- !u!23 &4250551487033628811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -184,11 +184,13 @@ MonoBehaviour:
   autoRotate: {x: 0, y: 0, z: 0}
   removeParent: 0
   customUpdate: 1
-  framePriority: 1
-  offset: {x: 90, y: 180, z: 0}
+  framePriority: 0
+  offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
   lockX: 0
   lockY: 0
   lockZ: 0
+  mmc: 0
 --- !u!1 &8492980991090270596
 GameObject:
   m_ObjectHideFlags: 0

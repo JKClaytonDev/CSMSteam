@@ -38,8 +38,13 @@ public class gunShading : MonoBehaviour
 
     public void TakeSnapshot()
     {
+        StartCoroutine(Snap());
+    }
+    IEnumerator Snap()
+    {
+        yield return frameEnd;
         checks++;
-        
+
         Texture2D texture = new Texture2D(w, w, TextureFormat.RGB24, true);
         texture.ReadPixels(new Rect(0, 0, w, w), 0, 0);
         texture.LoadRawTextureData(texture.GetRawTextureData());
@@ -54,7 +59,6 @@ public class gunShading : MonoBehaviour
 
         // gameObject.renderer.material.mainTexture = TakeSnapshot;
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {

@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject[] enableStart;
     public Canvas[] trailerCanvas;
     public float sens;
-    Camera mainCam;
+    public Camera mainCam;
     Vector3 velocity;
     float knockCooldown;
 
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        Time.timeScale = 1;
         myTransform = transform;
         if (FindObjectOfType<billboardOBJ>())
         {

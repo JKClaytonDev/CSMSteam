@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 876004150996675614}
   - component: {fileID: 876004150996675613}
   - component: {fileID: 876004150996675612}
-  - component: {fileID: 1940186324794745452}
   - component: {fileID: 1123379575398273432}
+  - component: {fileID: 3002805626964835338}
   m_Layer: 0
   m_Name: Tree2
   m_TagString: Untagged
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876004150996675609}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
 --- !u!23 &876004150996675612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -85,27 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1940186324794745452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876004150996675609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436d5ae7af5e9de43b08bf17ee44a463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoRotate: {x: 0, y: 0, z: 0}
-  removeParent: 0
-  customUpdate: 1
-  framePriority: 0
-  offset: {x: 0, y: 0, z: 0}
-  lockX: 0
-  lockY: 0
-  lockZ: 0
-  mmc: 0
 --- !u!136 &1123379575398273432
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -120,3 +99,15 @@ CapsuleCollider:
   m_Height: 8.06
   m_Direction: 2
   m_Center: {x: -0.92, y: 0, z: 0}
+--- !u!114 &3002805626964835338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876004150996675609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7105d95adaed4494aa66a6b34dfefb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

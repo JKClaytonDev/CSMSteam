@@ -10,6 +10,7 @@ public class playerBullet : MonoBehaviour
     public GameObject canvas;
     public LayerMask layers;
     public bool sniper;
+    public bool SMG;
     public bool reverse;
     public Vector3 startPos;
     public bool arrow;
@@ -31,6 +32,7 @@ public class playerBullet : MonoBehaviour
     float axeTime;
     public GameObject waterObject;
     float startTime;
+    public GameObject flashCanvas;
     public bool water;
     // Start is called before the first frame update
 
@@ -41,7 +43,7 @@ public class playerBullet : MonoBehaviour
         if (Time.timeSinceLevelLoad < 0.5f || Time.timeScale < 0.5f)
             Destroy(gameObject);
         Camera.main.gameObject.GetComponent<Animator>().Play("recoil");
-        canvas.SetActive(!(arrow || AlienBullet || Axe));
+        canvas.SetActive(!(arrow || AlienBullet || Axe || SMG));
         if (Axe)
         {
             FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().SetBool("hasAxe", false);
@@ -109,7 +111,8 @@ public class playerBullet : MonoBehaviour
     }
     public void checkTrigger(GameObject collision)
     {
-
+        if (collision.gameObject.GetComponent<triggerenable>() || collision.gameObject.GetComponent<triggerAnim>() || collision.gameObject.GetComponent<triggerSound>() || collision.gameObject.GetComponent<enableTrigger>())
+            return;
         if (collision.gameObject.name.Contains("Player"))
             return;
         if (collision.layer == layers)

@@ -22,7 +22,9 @@ public class MissionSelectScene : MonoBehaviour
     {
         PlayerPrefs.SetInt("Missions", 1);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(FindObjectOfType<ChapterScript>().getSceneName());
+        PlayerPrefs.SetString("LoadingScreenScene", FindObjectOfType<ChapterScript>().getSceneName());
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("LoadingScreen");
     }
     
 }

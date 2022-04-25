@@ -50,7 +50,11 @@ public class DoorLoadScene : MonoBehaviour
             string newScene = scene.Substring(0, scene.Length - 1) + (finalChar + 1);
             Debug.Log("NEW SCENE IS" + newScene);
             if (Application.CanStreamedLevelBeLoaded(newScene))
-                SceneManager.LoadScene(newScene);
+            {
+                PlayerPrefs.SetString("LoadingScreenScene", newScene);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("LoadingScreen");
+            }
             else
                 SceneManager.LoadScene("Menu");
             return;
@@ -86,7 +90,9 @@ public class DoorLoadScene : MonoBehaviour
                 if (PlayerPrefs.GetInt("Missions") != 1) { PlayerPrefs.SetString("HubScene", scene); PlayerPrefs.Save(); }
 
             }
-            SceneManager.LoadScene(scene);
+            PlayerPrefs.SetString("LoadingScreenScene", scene);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("LoadingScreen");
         }
     }
 }

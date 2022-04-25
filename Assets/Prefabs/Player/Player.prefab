@@ -2097,7 +2097,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545180036}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
 --- !u!23 &545180038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3109,7 +3109,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 2999
   m_TargetDisplay: 0
 --- !u!114 &719676037
 MonoBehaviour:
@@ -3710,7 +3710,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789761689}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
 --- !u!23 &789761692
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9618,7 +9618,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815687794}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
 --- !u!23 &1815687796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10823,6 +10823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c4d6c5dcf23c546a18044f52faa15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetC: {r: 0, g: 0, b: 0, a: 0}
   unlit: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
   lit: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   defaultTex: {fileID: 2800000, guid: c937d2005f4fc174e9b5a0ad881f9828, type: 3}
@@ -11796,6 +11797,7 @@ MonoBehaviour:
   - {fileID: 1804888362}
   - {fileID: 2443427270307359545}
   sens: 0
+  mainCam: {fileID: 0}
 --- !u!54 &2443427270338601581
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12410,6 +12412,7 @@ GameObject:
   - component: {fileID: 2443427271024370578}
   - component: {fileID: 9093095628960868334}
   - component: {fileID: 1819605565}
+  - component: {fileID: 2991292352088030020}
   m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12633,6 +12636,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2991292352088030020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443427271024370577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd9a8a711574a4448ac80b5abb9d5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetC: {r: 1, g: 1, b: 1, a: 0}
+  unlit: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  lit: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  defaultTex: {fileID: 2800000, guid: c937d2005f4fc174e9b5a0ad881f9828, type: 3}
+  LQvolume: {fileID: 4389499205423148988, guid: 1017f03a343fe7044ac4b26cb75a6fc0, type: 3}
 --- !u!1 &2443427271049127749
 GameObject:
   m_ObjectHideFlags: 0
@@ -19543,6 +19563,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3081705991563958024, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
     - target: {fileID: 3081705991563958036, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -19551,10 +19575,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3081705991565039957, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
+    - target: {fileID: 3081705991604409314, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
     - target: {fileID: 3081705991604409327, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3081705993055858784, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: b77bc9d693b20c447bddf69e90d98b5f, type: 3}
     - target: {fileID: 3081705993055858796, guid: 5d4509db819e2dc4d8a0cea00702812a, type: 3}
       propertyPath: m_IsActive
       value: 0

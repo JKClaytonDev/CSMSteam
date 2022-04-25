@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 437.44296, g: 663.8252, b: 4881.574, a: 1}
+  m_IndirectSpecularColor: {r: 437.46005, g: 663.8772, b: 4881.8096, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1746,6 +1746,7 @@ MonoBehaviour:
   customUpdate: 1
   framePriority: 0
   offset: {x: 0, y: 0, z: 90}
+  player: {fileID: 0}
   lockX: 1
   lockY: 1
   lockZ: 0
@@ -1828,6 +1829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 644391505}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!1 &299812326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 865885521}
+  instantiateGO: {fileID: 0}
+  reference: {fileID: 0}
 --- !u!4 &495917529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2211070131186189909, guid: 047c1838a3510e84182fd2a7693b7fec, type: 3}
@@ -4985,6 +4990,7 @@ MonoBehaviour:
   customUpdate: 0
   framePriority: 1
   offset: {x: 90, y: 90, z: 90}
+  player: {fileID: 0}
   lockX: 1
   lockY: 1
   lockZ: 0
@@ -7494,7 +7500,6 @@ GameObject:
   - component: {fileID: 1236404387}
   - component: {fileID: 1236404388}
   - component: {fileID: 1236404389}
-  - component: {fileID: 1236404390}
   m_Layer: 0
   m_Name: Nosferatu
   m_TagString: Untagged
@@ -7539,6 +7544,7 @@ MonoBehaviour:
   customUpdate: 0
   framePriority: 1
   offset: {x: 90, y: 90, z: 90}
+  player: {fileID: 0}
   lockX: 1
   lockY: 1
   lockZ: 0
@@ -7556,43 +7562,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1236404390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236404386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2f0c1d7163af146b2097f9b900105c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m: {fileID: 1976805647}
-  dontshow: 0
-  stunTime: 0
-  enemyName: Nosferatu
-  unkillable: 0
-  parent: {fileID: 0}
-  disableLowHealth: {fileID: 0}
-  currentHealth: 1
-  damages:
-  - 0
-  - 0.00008978676
-  - 0.00011223344
-  - 0.00011223344
-  - 0.00011223344
-  - 0.00015712678
-  - 0.00022446689
-  - 0.00022446689
-  - 0.00022446689
-  - 0.00022446689
-  - 0.000067340065
-  - 0.000067340065
-  bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
-  hitSound: {fileID: 0}
-  bloodTime: 0.5
-  colorTime: 0
 --- !u!43 &1237093984
 Mesh:
   m_ObjectHideFlags: 0
@@ -16072,6 +16041,7 @@ MonoBehaviour:
   customUpdate: 0
   framePriority: 1
   offset: {x: 90, y: 90, z: 90}
+  player: {fileID: 0}
   lockX: 1
   lockY: 1
   lockZ: 0

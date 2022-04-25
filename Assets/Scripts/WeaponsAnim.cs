@@ -263,7 +263,6 @@ public class WeaponsAnim : MonoBehaviour
             Debug.Log("firing");
             GameObject g = Instantiate(bullet);
 
-
             RaycastHit hit;
             if (!Physics.Raycast(player.transform.position, player.transform.forward, out hit, 150))
                 return;
@@ -275,6 +274,10 @@ public class WeaponsAnim : MonoBehaviour
             if (weaponNum == 5)
             {
                 g.GetComponent<playerBullet>().AlienBullet = true;
+            }
+            if (weaponNum == 10)
+            {
+                g.GetComponent<playerBullet>().SMG = true;
             }
             if (weaponNum == 6)
             {
