@@ -14,7 +14,7 @@ public class BossShootParticles : MonoBehaviour
             GameObject bullet = Instantiate(shoot);
             bullet.transform.position = transform.position;
             bullet.transform.LookAt(Camera.main.transform.position);
-            shootTime = Time.realtimeSinceStartup + 5;
+            shootTime = Time.realtimeSinceStartup + 3;
         }
     }
 }

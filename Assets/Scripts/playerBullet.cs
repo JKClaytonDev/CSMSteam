@@ -149,7 +149,7 @@ public class playerBullet : MonoBehaviour
             Destroy(f, 2);
             foreach (Collider c in Physics.OverlapSphere(transform.position, 15))
             {
-                if (c.GetComponent<enemyHealth>() && !c.GetComponent<enemyHealth>().unkillable)
+                if (c.GetComponent<enemyHealth>() && !c.GetComponent<enemyHealth>().unkillable && c.gameObject.GetComponent<enemyHealth>().enabled)
                 {
                     c.GetComponent<enemyHealth>().currentHealth -= c.GetComponent<enemyHealth>().damages[1] * 10;
                     Destroy(c.gameObject);
@@ -160,7 +160,7 @@ public class playerBullet : MonoBehaviour
         }
         else
         {
-            if (hit.transform.gameObject.GetComponent<enemyHealth>())
+            if (hit.transform.gameObject.GetComponent<enemyHealth>() && hit.transform.gameObject.GetComponent<enemyHealth>().enabled)
             {
                 hitEnemy(hit.transform.gameObject);
             }
@@ -171,6 +171,8 @@ public class playerBullet : MonoBehaviour
     }
     void hitEnemy(GameObject hit)
     {
+        if (hit.transform.gameObject.GetComponent<enemyHealth>().enabled == false)
+            return;
         hit.transform.gameObject.GetComponent<enemyHealth>().colorTime = Time.realtimeSinceStartup + 0.3f;
         playerParent.hitSound();
         Debug.Log("bullet hit");
