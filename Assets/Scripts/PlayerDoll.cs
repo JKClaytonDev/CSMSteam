@@ -5,8 +5,18 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerDoll : MonoBehaviour
 {
-    public AudioClip sound;
+    public AudioClip villagerSound;
+    public AudioClip protoSound;
+    public AudioClip playerSound;
+    public AudioClip dollSound;
 
+    bool hasSound;
+
+    string speakMessage;
+    float talkMessageTime;
+
+    public AudioClip sound;
+    int set;
     public GameObject SpeakText;
     public bool alwaysSpeak;
     Animator anim;
@@ -21,6 +31,7 @@ public class PlayerDoll : MonoBehaviour
     public AudioClip[] sounds;
     void OnEnable()
     {
+        speakMessage = "";
         if (GetComponent<AudioSource>())
         GetComponent<AudioSource>().PlayOneShot(sound);
     }
@@ -70,6 +81,7 @@ public class PlayerDoll : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
         {
             textIndex++;
+            speakMessage = "";
             if (imageIndexes[textIndex] == dollSprite)
                 anim.Play("DollTalk");
             if (GetComponent<AudioSource>() && !sounds[textIndex])
@@ -80,7 +92,7 @@ public class PlayerDoll : MonoBehaviour
         changeImage.sprite = imageIndexes[textIndex];
         if (changeText.text != textIndexes[textIndex])
         {
-            changeText.text = textIndexes[textIndex];
+            changeText.text = speakMessage;
             if (sounds.Length == textIndexes.Length)
             {
                 if (sounds[textIndex] && GetComponent<AudioSource>())
@@ -91,6 +103,25 @@ public class PlayerDoll : MonoBehaviour
                     GetComponent<AudioSource>().PlayOneShot(sounds[textIndex], 3);
                 }
             }
+        }
+
+        if (Time.realtimeSinceStartup > talkMessageTime && speakMessage != textIndexes[textIndex])
+        {
+            speakMessage = textIndexes[textIndex].Substring(0, speakMessage.Length + 1);
+            talkMessageTime = Time.realtimeSinceStartup + 0.03f;
+            float volume = 0.5f;
+            if (set % 4 == 0)
+            {
+                if (imageIndexes[textIndex].name.Contains("Doll"))
+                    GetComponent<AudioSource>().PlayOneShot(dollSound, volume);
+                else if (imageIndexes[textIndex].name.Contains("Player"))
+                    GetComponent<AudioSource>().PlayOneShot(playerSound, volume);
+                else if (imageIndexes[textIndex].name.Contains("Proto"))
+                    GetComponent<AudioSource>().PlayOneShot(protoSound, volume);
+                else if (imageIndexes[textIndex].name.Contains("Villag"))
+                    GetComponent<AudioSource>().PlayOneShot(villagerSound, volume);
+            }
+            set++;
         }
     }
 }

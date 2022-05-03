@@ -10,10 +10,12 @@ public class MoneyBag : MonoBehaviour
     private void Start()
     {
         transform.parent = null;
+        Time.timeScale = 1;
     }
     private void OnEnable()
     {
         transform.parent = null;
+        
     }
     private void OnTriggerEnter(Collider other)
     {

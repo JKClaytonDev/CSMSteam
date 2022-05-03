@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
+    float bhopSpeedBoost;
     float checkTime;
     public bool skip;
     public SoundManager s;
@@ -62,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCam;
     Vector3 velocity;
     float knockCooldown;
+    float bhopSpeed = 1;
 
     private Transform myTransform;
 
@@ -81,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        if (PlayerPrefs.HasKey("BhopBoost"))
+            bhopSpeedBoost = PlayerPrefs.GetFloat("BhopBoost");
+        else
+            bhopSpeedBoost = 0.2f;
         Time.timeScale = 1;
         myTransform = transform;
         if (FindObjectOfType<billboardOBJ>())
@@ -192,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
                 foreach (Canvas c in hideCanvas)
                     c.enabled = false;
             }
-            GetComponent<Rigidbody>().velocity = 25 * (transform.forward * Input.GetAxis("Vertical") + myTransform.right * Input.GetAxis("Horizontal") * flipped);
+            GetComponent<Rigidbody>().velocity = (25*bhopSpeed) * (transform.forward * Input.GetAxis("Vertical") + myTransform.right * Input.GetAxis("Horizontal") * flipped);
             GetComponent<Rigidbody>().useGravity = false;
             myTransform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
             return;
@@ -211,20 +217,24 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(PlayerPrefs.GetString("JumpKeybind")) && !jumpHeld)
         {
-            if (Physics.Raycast(transform.position, Vector3.down, groundDistance + 0.2f))
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit ret, groundDistance + 0.2f))
             {
-                if (!FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().GetCurrentAnimatorStateInfo(2).IsName("Jump"))
+                if (!ret.transform.gameObject.GetComponent<InstaKill>())
                 {
-                    jumpHeld = true;
-                    jumpTime = Time.realtimeSinceStartup + 0.6f;
-                    Vector3 vel = GetComponent<Rigidbody>().velocity;
-                    vel.y = 10;
-                    FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().Play("Jump", 2);
-                    GetComponent<Rigidbody>().velocity = vel;
+                    if (!FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().GetCurrentAnimatorStateInfo(2).IsName("Jump"))
+                    {
+                        jumpHeld = true;
+                        jumpTime = Time.realtimeSinceStartup + 0.6f;
+                        Vector3 vel = GetComponent<Rigidbody>().velocity;
+                        vel.y = 10;
+                        FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().Play("Jump", 2);
+                        GetComponent<Rigidbody>().velocity = vel;
+                        bhopSpeed = 1 + bhopSpeedBoost;
+                    }
                 }
             }
         }
-        
+        bhopSpeed = Mathf.MoveTowards(bhopSpeed, 1, Time.deltaTime);
         if (dollActive)
         {
             wepCanvas.transform.localScale = new Vector3(0, 0, 0);

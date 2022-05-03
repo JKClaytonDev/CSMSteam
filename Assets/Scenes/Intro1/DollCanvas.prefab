@@ -197,7 +197,7 @@ RectTransform:
   - {fileID: 4098832317120938072}
   - {fileID: 6754944500159777682}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -298,7 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d032f5a86b08d4b4b93d79539942ae59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 997515ff8e13f7e4e8745a31186a87c2, type: 3}
+  villagerSound: {fileID: 8300000, guid: d023f87427e3b854fb3428e30630cb2b, type: 3}
+  protoSound: {fileID: 8300000, guid: bc96d0dfac29bf84196bf4e381f1afbf, type: 3}
+  playerSound: {fileID: 8300000, guid: 8857a1750095bad49b3d457b9668d20a, type: 3}
+  dollSound: {fileID: 8300000, guid: cf7142c0cdc09a243ad16c60e2dcfc24, type: 3}
+  sound: {fileID: 8300000, guid: 5ebf5e185d781ea46b4b84c31bd176d6, type: 3}
   SpeakText: {fileID: 6943282590765057356}
   alwaysSpeak: 0
   hideDoll: 0

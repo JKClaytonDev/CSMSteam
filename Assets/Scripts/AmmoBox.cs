@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class AmmoBox : MonoBehaviour
 {
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
     public AudioClip sound;
 
     private void OnCollisionStay(Collision collision)

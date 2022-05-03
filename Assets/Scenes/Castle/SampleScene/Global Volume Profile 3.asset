@@ -194,10 +194,10 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0
   m_ResolutionDepthRatio:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   - {fileID: -4512897291532946837}
   - {fileID: -1182325820143552752}
   - {fileID: 2193821961710251038}
+  - {fileID: 7892789375424720577}
 --- !u!114 &1270646460314211348
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -446,7 +447,7 @@ MonoBehaviour:
     m_Value: 0.75
   m_RayMaxIterations:
     m_OverrideState: 0
-    m_Value: 32
+    m_Value: 0
   rayMiss:
     m_OverrideState: 0
     m_Value: 3
@@ -711,19 +712,19 @@ MonoBehaviour:
     m_Value: 1
   m_MaxRaySteps:
     m_OverrideState: 0
-    m_Value: 64
+    m_Value: 0
   m_DenoiseSS:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   m_HalfResolutionDenoiserSS:
     m_OverrideState: 0
     m_Value: 0
   m_DenoiserRadiusSS:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 0
   m_SecondDenoiserPassSS:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   lastBounceFallbackHierarchy:
     m_OverrideState: 0
     m_Value: 3
@@ -826,3 +827,49 @@ MonoBehaviour:
   gradientDiffusion:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &7892789375424720577
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  maximumVelocity:
+    m_OverrideState: 1
+    m_Value: 0
+  minimumVelocity:
+    m_OverrideState: 1
+    m_Value: 0
+  cameraMotionBlur:
+    m_OverrideState: 0
+    m_Value: 1
+  specialCameraClampMode:
+    m_OverrideState: 0
+    m_Value: 0
+  cameraVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraTranslationVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraRotationVelocityClamp:
+    m_OverrideState: 0
+    m_Value: 0.03
+  depthComparisonExtent:
+    m_OverrideState: 0
+    m_Value: 1
+  m_SampleCount:
+    m_OverrideState: 1
+    m_Value: 2

@@ -5472,9 +5472,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
+      propertyPath: dollSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cf7142c0cdc09a243ad16c60e2dcfc24, type: 3}
+    - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
+      propertyPath: protoSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bc96d0dfac29bf84196bf4e381f1afbf, type: 3}
+    - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
       propertyPath: alwaysSpeak
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
+      propertyPath: playerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8857a1750095bad49b3d457b9668d20a, type: 3}
+    - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
+      propertyPath: villagerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d023f87427e3b854fb3428e30630cb2b, type: 3}
     - target: {fileID: 4098832317825183884, guid: c6287c591b1d0384292d0549a7b8909c, type: 3}
       propertyPath: textIndexes.Array.size
       value: 2

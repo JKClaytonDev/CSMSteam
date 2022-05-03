@@ -18,7 +18,7 @@ public class TextureModManager : MonoBehaviour
             m.gameObject.AddComponent<replaceTextures>();
             m.gameObject.GetComponent<replaceTextures>().replaceMat = mt;
         }
-        if (QualitySettings.GetQualityLevel() == 0) {
+        if (PlayerPrefs.GetInt("DisableLighting") == 1) {
         RenderSettings.ambientLight = Color.white;
         foreach (Light l in FindObjectsOfType<Light>())
         {

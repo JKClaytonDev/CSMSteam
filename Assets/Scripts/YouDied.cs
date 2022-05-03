@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.HighDefinition;
 public class YouDied : MonoBehaviour
 {
     public Canvas attached;
@@ -9,6 +10,7 @@ public class YouDied : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<HDAdditionalCameraData>().allowDynamicResolution = PlayerPrefs.GetInt("DisableDynamic") != 1;
         GetComponent<Rigidbody>().velocity = Random.insideUnitSphere;
         GetComponent<Rigidbody>().AddTorque(Random.insideUnitSphere);
     }

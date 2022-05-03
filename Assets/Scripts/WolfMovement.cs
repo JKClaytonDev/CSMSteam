@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.HighDefinition;
 
 
 public class WolfMovement : MonoBehaviour
@@ -32,6 +33,7 @@ public class WolfMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        child.GetComponent<HDAdditionalCameraData>().allowDynamicResolution = PlayerPrefs.GetInt("DisableDynamic") != 1;
         Physics.gravity = Vector3.up * -99;
         if (PlayerPrefs.GetFloat("Mouse") == 0)
             PlayerPrefs.SetFloat("Mouse", 1);

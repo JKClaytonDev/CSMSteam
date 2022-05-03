@@ -43,6 +43,8 @@ public class DoorLoadScene : MonoBehaviour
         }
         foreach (billboardOBJ k in FindObjectsOfType<billboardOBJ>())
             k.enabled = false;
+        foreach (treeBillboard k in FindObjectsOfType<treeBillboard>())
+            k.enabled = false;
         if (PlayerPrefs.GetInt("Missions") == 1)
         {
             string scene = SceneManager.GetActiveScene().name;
