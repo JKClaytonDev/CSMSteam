@@ -17,7 +17,7 @@ public class PlayerVoices : MonoBehaviour
     public float multiplier;
     public void updateSounds()
     {
-        Debug.Log("INIT MUSIC VOLUME " + PlayerPrefs.GetFloat("MusicVolume"));
+        //Debug.Log("INIT MUSIC VOLUME " + PlayerPrefs.GetFloat("MusicVolume"));
         foreach (AudioSource a in FindObjectsOfType<AudioSource>())
         {
             if (a.clip)
@@ -80,7 +80,7 @@ public class PlayerVoices : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt("Missions") == 1)
                     return;
-                Debug.Log("CALLED FOR SOUND");
+                //Debug.Log("CALLED FOR SOUND");
                 int max = Mathf.Min(8+ PlayerPrefs.GetInt("ShardCount")/3, killZombieSounds.Length - 1);
                 AudioClip clip = killZombieSounds[Random.Range(0, max)];
                 playTime = Time.realtimeSinceStartup + clip.length + Random.Range(0, 3);
@@ -117,7 +117,7 @@ public class PlayerVoices : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Missions") == 1)
                 return;
-            Debug.Log("CALLED FOR SOUND");
+            //Debug.Log("CALLED FOR SOUND");
             AudioClip clip = a[Random.Range(0, a.Length - 1)];
             playTime = Time.realtimeSinceStartup + clip.length + Random.Range(0, 3);
             GetComponent<AudioSource>().pitch = 1;

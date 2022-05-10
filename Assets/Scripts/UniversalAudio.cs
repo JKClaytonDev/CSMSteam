@@ -8,12 +8,12 @@ public class UniversalAudio : MonoBehaviour
     public AudioClip hitSound;
     public void bite()
     {
-        Debug.Log("BIT THE PLAYER");
+        //Debug.Log("BIT THE PLAYER");
         anim.Play("PlayerBite");
     }
     public void scratch()
     {
-        Debug.Log("SCRATCHEd THE PLAYER");
+        //Debug.Log("SCRATCHEd THE PLAYER");
         anim.Play("PlayerHit");
     }
     public void getHit()

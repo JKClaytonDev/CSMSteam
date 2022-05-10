@@ -51,14 +51,14 @@ public class MoveEnemy : MonoBehaviour
             
             foreach (Material m in mat)
             {
-                Debug.Log("TESTING CONTAINS " + (m.name + " (Instance)") + " " + moveMesh.material.name);
+                //Debug.Log("TESTING CONTAINS " + (m.name + " (Instance)") + " " + moveMesh.material.name);
                 if ((m.name + "  (Instance)") == moveMesh.material.name)
                     contains = true;
             }
         }
         if (contains)
         {
-            Debug.Log("CONTAINS");
+            //Debug.Log("CONTAINS");
             return;
         }
         Vector3 vel = (Vector3.MoveTowards(player.transform.position, transform.position, 5) - transform.position) * EnemySpeed;

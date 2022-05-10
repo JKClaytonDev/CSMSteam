@@ -33,7 +33,7 @@ public class SoundManager : MonoBehaviour
     {
         if (f == 100 || Time.realtimeSinceStartup < startTime + 1)
             return;
-        Debug.Log("MUSIC VALUE CHANGE");
+        //Debug.Log("MUSIC VALUE CHANGE");
         PlayerPrefs.SetFloat("MusicVolume", f);
         PlayerPrefs.Save();
         if (a)
@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour
 
         if (k == 100 || Time.realtimeSinceStartup < startTime + 1)
             return;
-        Debug.Log("MUSIC VALUE CHANGE");
+        //Debug.Log("MUSIC VALUE CHANGE");
         PlayerPrefs.SetFloat("VoiceVolume", k);
         PlayerPrefs.Save();
         FindObjectOfType<PlayerVoices>().updateSounds();

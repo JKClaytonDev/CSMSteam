@@ -58,7 +58,7 @@ public class gameSettings : MonoBehaviour
         // Print the resolutions
         foreach (var res in resolutions)
         {
-            Debug.Log(res.width + "x" + res.height + " : " + res.refreshRate);
+            //Debug.Log(res.width + "x" + res.height + " : " + res.refreshRate);
             string option = (res.width + "x" + res.height + " : " + res.refreshRate);
             resOptions.Add(option);
 
@@ -101,7 +101,7 @@ public class gameSettings : MonoBehaviour
     {
         if (f == 199)
             return;
-        Debug.Log("SET VOLUME TO " + f);
+        //Debug.Log("SET VOLUME TO " + f);
         PlayerPrefs.SetFloat("vol", f);
         PlayerPrefs.Save();
         AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
@@ -122,7 +122,7 @@ public class gameSettings : MonoBehaviour
     }
     public void SetQuality(int qualityIndex)
 {
-        Debug.Log("Graphics Index is " + qualityIndex);
+        //Debug.Log("Graphics Index is " + qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
         if (qualityIndex != 6) // if the user is not using 
                                //any of the presets

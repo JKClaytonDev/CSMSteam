@@ -50,11 +50,11 @@ PlayerSettings:
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
-  m_SpriteBatchVertexThreshold: 300
+  m_SpriteBatchVertexThreshold: 8000
   m_MTRendering: 1
   mipStripping: 1
   numberOfMipsStripped: 0
-  m_StackTraceTypes: 010000000100000001000000010000000100000001000000
+  m_StackTraceTypes: 000000000000000000000000000000000000000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
@@ -133,30 +133,13 @@ PlayerSettings:
   vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
-  m_SupportedAspectRatios:
-    4:3: 0
-    5:4: 0
-    16:10: 1
-    16:9: 1
-    Others: 0
+  loadStoreDebugModeEnabled: 0
   bundleVersion: 2.0
   preloadedAssets:
   - {fileID: 2443427270338601575, guid: a41e6dece68945e46b8c058508826063, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3437672929981430992, guid: 522f0c1ab27d3024199547c321e69030, type: 3}
+  - {fileID: 7368344443437988592, guid: 4439707780a89fe4abb694af637bc604, type: 3}
+  - {fileID: 8067471063796291968, guid: ed1aa4b3a55cf764a8330a48fc9584a7, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -166,11 +149,13 @@ PlayerSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
-  useHDRDisplay: 0
+  enableOpenGLProfilerGPURecorders: 1
+  useHDRDisplay: 1
   D3DHDRBitDepth: 1
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
+  resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
@@ -392,7 +377,7 @@ PlayerSettings:
       m_SubKind: 
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
-    m_StaticBatching: 0
+    m_StaticBatching: 1
     m_DynamicBatching: 1
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -426,6 +411,7 @@ PlayerSettings:
     m_EncodingQuality: 2
   m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
+  m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
   m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
@@ -691,22 +677,22 @@ PlayerSettings:
     Standalone: 0
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Standalone: 4
   incrementalIl2cppBuild: {}
-  suppressCommonWarnings: 0
+  suppressCommonWarnings: 1
   allowUnsafeCode: 1
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
-  assemblyVersionValidation: 1
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: CastilloOSHDRP
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -714,7 +700,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: CastilloOSHDRP
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: CastilloShatteredMirrors
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -790,5 +776,5 @@ PlayerSettings:
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
   forceSRGBBlit: 1
-  virtualTexturingSupportEnabled: 0
+  virtualTexturingSupportEnabled: 1
   insecureHttpOption: 0

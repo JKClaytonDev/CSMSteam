@@ -81,7 +81,7 @@ public class playerBullet : MonoBehaviour
         waterObject.SetActive(water);
         if (Axe && (Vector3.Distance(transform.position, playerParent.transform.position) < 3 && returnAxe || Time.realtimeSinceStartup > axeTime))
         {
-            Debug.Log("HAS AXE");
+            //Debug.Log("HAS AXE");
             FindObjectOfType<WeaponsAnim>().GetComponent<Animator>().SetBool("hasAxe", true);
             Destroy(gameObject);
         }
@@ -117,20 +117,20 @@ public class playerBullet : MonoBehaviour
             return;
         if (collision.layer == layers)
             return;
-        Debug.Log("TRIGGER PASS " + collision.gameObject.name);
-        Debug.Log("HIT " + collision.gameObject);
+        //Debug.Log("TRIGGER PASS " + collision.gameObject.name);
+        //Debug.Log("HIT " + collision.gameObject);
         if (collision.gameObject.name == "Player")
             return;
         if (Axe && returnAxe)
             return;
-        Debug.Log("bullet triggered");
+        //Debug.Log("bullet triggered");
         if (reverse)
         {
             if (collision.gameObject.name.Contains("Player"))
                 Destroy(gameObject);
             return;
         }
-        Debug.Log("HIT " + collision.gameObject.name);
+        //Debug.Log("HIT " + collision.gameObject.name);
         if (collision.gameObject.GetComponent<PlayerMovement>() || collision.gameObject.GetComponent<playerBullet>() || collision.gameObject.GetComponent<NullTrigger>())
             return;
         GameObject hit = collision.gameObject;
@@ -175,10 +175,10 @@ public class playerBullet : MonoBehaviour
             return;
         hit.transform.gameObject.GetComponent<enemyHealth>().colorTime = Time.realtimeSinceStartup + 0.3f;
         playerParent.hitSound();
-        Debug.Log("bullet hit");
+        //Debug.Log("bullet hit");
         if (hit.transform.gameObject.GetComponent<enemyHealth>().hitSound)
             FindObjectOfType<UniversalAudio>().playSound(hit.transform.gameObject.GetComponent<enemyHealth>().hitSound);
-        Debug.Log("HIT ENEMY");
+        //Debug.Log("HIT ENEMY");
         enemyHealth he = hit.transform.gameObject.GetComponent<enemyHealth>();
         float damage = 0;
         if (doll)
@@ -210,7 +210,7 @@ public class playerBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         checkTrigger(collision.gameObject);
-        Debug.Log("COLLISION");
+        //Debug.Log("COLLISION");
         if (collision.gameObject.GetComponent<PlayerMovement>() || collision.gameObject.GetComponent<playerBullet>() || collision.gameObject.GetComponent<NullTrigger>())
             return;
         if (collision.gameObject.name == "Player")

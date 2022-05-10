@@ -35,7 +35,7 @@ public class EnemyHealth : MonoBehaviour
                     GetComponent<Rigidbody>().velocity = pos;
                     GetComponent<runAtPlayer>().seenTime = Time.realtimeSinceStartup + 1;
                 }
-                Debug.Log(this.name + " " + health);
+                //Debug.Log(this.name + " " + health);
                 if (health == 1)
                 {
                     player.GetComponent<AudioSource>().PlayOneShot(hitSounds[Random.Range(0, hitSounds.Length)]);
@@ -55,7 +55,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if (health < 0)
         {
-            Debug.Log("ENEMY KILLS " + PlayerPrefs.GetFloat("EnemyKills"));
+            //Debug.Log("ENEMY KILLS " + PlayerPrefs.GetFloat("EnemyKills"));
             float kills = PlayerPrefs.GetFloat("EnemyKills");
             float code = 0;
             Destroy(gameObject);

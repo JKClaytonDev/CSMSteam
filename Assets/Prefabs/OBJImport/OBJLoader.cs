@@ -64,7 +64,7 @@ namespace Dummiesman
                 };
                 loader.Load(pth);
 
-                Debug.Log($"OBJ import time: {s.ElapsedMilliseconds}ms");
+                //Debug.Log($"OBJ import time: {s.ElapsedMilliseconds}ms");
                 s.Stop();
             }
         }

@@ -18,7 +18,7 @@ public class WebCam : MonoBehaviour
         webcamTexture.Stop();
         WebCamDevice[] devices = WebCamTexture.devices;
         int index = 0;
-        Debug.Log("PICKED " + devices[index].name);
+        //Debug.Log("PICKED " + devices[index].name);
         webcamTexture.deviceName = devices[index].name;
         Renderer renderer = GetComponent<Renderer>();
         webcamTexture.Play();

@@ -25,7 +25,7 @@ public class AnimationAudioSource : MonoBehaviour
     {
         if (Random.Range(1, randomChance) != 1)
             return;
-        Debug.Log("PLAYED");
+        //Debug.Log("PLAYED");
         FindObjectOfType<UniversalAudio>().playSound(clip);
     }
     public void attack()

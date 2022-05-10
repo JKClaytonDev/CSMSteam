@@ -15,7 +15,7 @@ MonoBehaviour:
   version: 0
 --- !u!21 &2100000
 Material:
-  serializedVersion: 7
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24,7 +24,12 @@ Material:
   m_Shader: {fileID: 10761, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ShaderKeywords: _ALPHATEST_ON _DISABLE_SSR_TRANSPARENT _DOUBLESIDED_ON _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ALPHATEST_ON
+  - _DISABLE_SSR_TRANSPARENT
+  - _DOUBLESIDED_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -283,7 +288,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.8575828, g: 0.8922095, b: 0.86281055, a: 1}
+    - _Color: {r: 0.9, g: 0.66667867, b: 0.9, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

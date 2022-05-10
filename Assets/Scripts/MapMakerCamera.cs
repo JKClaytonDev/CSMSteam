@@ -65,7 +65,7 @@ public class MapMakerCamera : MonoBehaviour
             {
                 if (!hit.collider.gameObject.GetComponent<CantSelect>())
                 {
-                    Debug.Log("SELECTED " + hit.transform.gameObject.name);
+                    //Debug.Log("SELECTED " + hit.transform.gameObject.name);
                     selectedObject = hit.collider.gameObject;
 
                 }
@@ -151,11 +151,11 @@ public class MapMakerCamera : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.C))
         {
             copyBlock();
-            Debug.Log("COPY");
+            //Debug.Log("COPY");
         }
         else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.V))
         {
-            Debug.Log("PASTE");
+            //Debug.Log("PASTE");
             pasteBlock(copied);
             
         }

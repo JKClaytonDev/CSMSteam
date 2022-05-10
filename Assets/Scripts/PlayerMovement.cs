@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator camAnim;
+    Vector3 lastMovePos;
     float bhopSpeedBoost;
     float checkTime;
     public bool skip;
@@ -69,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void checkTitle()
     {
-        Debug.Log("TITLE IS " + PlayerPrefs.GetString("MenuWorldTitle"));
+        //Debug.Log("TITLE IS " + PlayerPrefs.GetString("MenuWorldTitle"));
         if (title && PlayerPrefs.GetInt("Missions") != 1 && !PlayerPrefs.HasKey("Entered" + PlayerPrefs.GetString("MenuWorldTitle")))
         {
             Instantiate(title);
@@ -83,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        lastMovePos = new Vector3();
         if (PlayerPrefs.HasKey("BhopBoost"))
             bhopSpeedBoost = PlayerPrefs.GetFloat("BhopBoost");
         else
@@ -110,12 +113,12 @@ public class PlayerMovement : MonoBehaviour
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         if (!PlayerPrefs.HasKey("VoiceVolume"))
         {
             PlayerPrefs.SetFloat("VoiceVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         PlayerPrefs.Save();
         FindObjectOfType<PlayerVoices>().updateSounds();
@@ -184,6 +187,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
         if (Time.realtimeSinceStartup > checkTime)
         {
             AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
@@ -200,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
             }
             GetComponent<Rigidbody>().velocity = (25*bhopSpeed) * (transform.forward * Input.GetAxis("Vertical") + myTransform.right * Input.GetAxis("Horizontal") * flipped);
             GetComponent<Rigidbody>().useGravity = false;
-            myTransform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped;
+            myTransform.localEulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * PlayerPrefs.GetFloat("MouseSens") * flipped * Time.timeScale;
             return;
         }
         if (Time.realtimeSinceStartup > checkTime)
@@ -256,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(transform.position + myTransform.forward * 4, 8);
             foreach (Collider c in hitColliders)
             {
-                Debug.Log("WHIP ENEMY INSIDE");
+                //Debug.Log("WHIP ENEMY INSIDE");
                 if (c.transform.gameObject.GetComponent<Rigidbody>() && !c.gameObject.GetComponent<InstaKill>())
                 {
                     if (c.transform.gameObject.GetComponent<enemyHealth>())
@@ -359,6 +364,9 @@ public class PlayerMovement : MonoBehaviour
             finalRun = running;
         if (PlayerPrefs.GetInt("ShiftWalk") == 1)
             finalRun = !running;
+        if (Vector3.Distance(transform.position, lastMovePos) < Time.deltaTime / 5f)
+            finalRun = false;
+        camAnim.SetBool("Run", finalRun);
         if (finalRun)
         {
             justPressed = true;
@@ -398,11 +406,11 @@ public class PlayerMovement : MonoBehaviour
         float MSensM = 0.5f;
         if (Input.GetMouseButton(1))
             MSensM = 0.3f;
-        MY += -Input.GetAxis("Mouse Y") * 6 * MSensM * rv * sens/15;
-        MX += Input.GetAxis("Mouse X") * 6 * MSensM * rv * flipped * sens / 15;
+        MY += (-Input.GetAxis("Mouse Y") * 6 * MSensM * rv * sens/15) * Time.timeScale;
+        MX += (Input.GetAxis("Mouse X") * 6 * MSensM * rv * flipped * sens / 15)*Time.timeScale;
         MY = Mathf.Min(60, Mathf.Max(-60, MY));
         angles = new Vector3(MY, MX, -Input.GetAxis("Horizontal"));
         myTransform.localEulerAngles = angles;
-        
+        lastMovePos = transform.position;
     }
 }

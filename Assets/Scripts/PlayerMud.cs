@@ -15,7 +15,7 @@ public class PlayerMud : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("mudhit " + other.gameObject.name);
+        //Debug.Log("mudhit " + other.gameObject.name);
         if (other.gameObject.name.Contains("Player"))
         {
             if (closePlayerObject)

@@ -17,7 +17,7 @@ public class HandManager : MonoBehaviour
     {
         if (Time.realtimeSinceStartup > handTime)
         {
-            Debug.Log("HAND");
+            //Debug.Log("HAND");
             handTime = Time.realtimeSinceStartup + 10;
             GameObject hand = hands[Random.Range(0, hands.Length - 1)];
             GameObject h = Instantiate(hand);

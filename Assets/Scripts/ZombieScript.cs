@@ -22,7 +22,15 @@ public class ZombieScript : MonoBehaviour
             distanceMultiplier = 1;
         GetComponent<enemyHealth>().enabled = false;
         rb = GetComponent<Rigidbody>();
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        try
+        {
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+        }
+        catch
+        {
+
+        }
+
     }
 
     float stunTime;
@@ -50,17 +58,25 @@ public class ZombieScript : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(sounds[Random.Range(1, 4)]);
             }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) < 3 && Time.timeScale > 0.5f)
+        try
         {
-            FindObjectOfType<UniversalAudio>().scratch();
-            FindObjectOfType<PlayerVoices>().Pain();
-            stunTime = Time.realtimeSinceStartup + 1;
-            if (closePlayerObject.attachedPlayer.GetComponent<attachedHealth>()) {
-                Debug.Log("FOUND ATTACHED HEALTH");
-                if (closePlayerObject.attachedPlayer.GetComponent<attachedHealth>().p)
-                    closePlayerObject.attachedPlayer.GetComponent<attachedHealth>().p.health -= 30;
+            if (Vector3.Distance(transform.position, player.transform.position) < 3 && Time.timeScale > 0.5f)
+            {
+                FindObjectOfType<UniversalAudio>().scratch();
+                FindObjectOfType<PlayerVoices>().Pain();
+                stunTime = Time.realtimeSinceStartup + 1;
+                if (closePlayerObject.attachedPlayer.GetComponent<attachedHealth>())
+                {
+                    //Debug.Log("FOUND ATTACHED HEALTH");
+                    if (closePlayerObject.attachedPlayer.GetComponent<attachedHealth>().p)
+                        closePlayerObject.attachedPlayer.GetComponent<attachedHealth>().p.health -= 30;
+                }
+
             }
-            
+        }
+        catch
+        {
+            return;
         }
         anim.SetFloat("Distance", Vector3.Distance(transform.position, player.transform.position) * distanceMultiplier);
     }

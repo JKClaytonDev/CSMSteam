@@ -18,7 +18,7 @@ public class CustomMapObject : MonoBehaviour
     }
     public void Declare(string typ, string tex, string inf)
     {
-        Debug.Log("DECLARED");
+        //Debug.Log("DECLARED");
         type = typ;
         texture = tex;
         info = inf;

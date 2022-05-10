@@ -46,7 +46,7 @@ public class playerHealth : MonoBehaviour
         heartImages = new GameObject[(int)(maxHealth / 10)];
         for (int i = 0; i < maxHealth; i += 10)
         {
-            Debug.Log("HEART IMAGE");
+            //Debug.Log("HEART IMAGE");
 
             GameObject f = Instantiate(heartImage);
             f.transform.SetParent(heartImage.transform.parent.transform, false);

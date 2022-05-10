@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class bakeLowGraphics : MonoBehaviour
 {
+    public Camera cam2;
     VisualEnvironment visualEnvironment;
     GradientSky gradientSky;
     public GameObject motionBlur;
@@ -20,6 +21,7 @@ public class bakeLowGraphics : MonoBehaviour
 
     private void OnEnable()
     {
+        //GetComponent<Camera>().GetComponent<HDAdditionalCameraData>().renderingPathCustomFrameSettingsOverrideMask = cam2.GetComponent<HDAdditionalCameraData>().renderingPathCustomFrameSettingsOverrideMask;
         if (PlayerPrefs.GetInt("MotionBlur") == 1)
             Instantiate(motionBlur);
         if (PlayerPrefs.GetInt("DisableLighting") == 1)

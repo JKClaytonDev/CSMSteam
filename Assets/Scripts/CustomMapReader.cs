@@ -120,7 +120,7 @@ public class CustomMapReader : MonoBehaviour
             finalString += c.objectString + "\n";
         }
         finalString += "\n}";
-    Debug.Log("FINAL STRING " + finalString);
+    //Debug.Log("FINAL STRING " + finalString);
         File.WriteAllText(path, finalString);
 
     }

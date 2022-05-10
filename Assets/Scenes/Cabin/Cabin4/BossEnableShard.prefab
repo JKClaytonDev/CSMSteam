@@ -565,7 +565,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 1187650741398883029}
     m_Modifications:
     - target: {fileID: 3819976655821205907, guid: d29b604ba9835ed49b87c78a065fe663, type: 3}
@@ -645,6 +645,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8927464700159996118, guid: d29b604ba9835ed49b87c78a065fe663, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1187650742505807070}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29b604ba9835ed49b87c78a065fe663, type: 3}
 --- !u!4 &6190999176621862643 stripped
 Transform:
@@ -666,7 +667,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 1187650741398883029}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 07d17c9fe86a2c649a045b6e1e577940, type: 3}
@@ -742,6 +743,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07d17c9fe86a2c649a045b6e1e577940, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8449454731195660340}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07d17c9fe86a2c649a045b6e1e577940, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8449454732895225559}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07d17c9fe86a2c649a045b6e1e577940, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8449454732895225557}
   m_SourcePrefab: {fileID: 100100000, guid: 07d17c9fe86a2c649a045b6e1e577940, type: 3}
 --- !u!4 &8271079735948285840 stripped
 Transform:

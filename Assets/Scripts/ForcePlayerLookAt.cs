@@ -18,7 +18,16 @@ public class ForcePlayerLookAt : MonoBehaviour
     void Update()
     {
         if (lastPlayerPos == new Vector3())
-            lastPlayerPos = FindObjectOfType<PlayerMovement>().gameObject.transform.position;
+        {
+            try
+            {
+                lastPlayerPos = FindObjectOfType<PlayerMovement>().gameObject.transform.position;
+            }
+            catch
+            {
+                return;
+            }
+        }
         if (closePlayerObject)
             player = closePlayerObject.attachedPlayer;
         if (!player)

@@ -39,7 +39,7 @@ public class ToggleObjects : MonoBehaviour
         if (float.Parse("" + time[time.Length - 1]) > 5 == tf)
         {
             tf = !tf;
-            Debug.Log("RUNSCRIPT");
+            //Debug.Log("RUNSCRIPT");
             if (tf)
             {
                 /*

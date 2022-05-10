@@ -7,19 +7,25 @@ public class closePlayer : MonoBehaviour
     public GameObject attachedPlayer;
     private void Start()
     {
-
-        attachedPlayer = FindObjectOfType<PlayerAttachment>().gameObject;
-
-        PlayerAttachment[] players = FindObjectsOfType<PlayerAttachment>();
-        attachedPlayer = players[0].gameObject;
-        float distance = Vector3.Distance(transform.position, attachedPlayer.transform.position);
-        foreach (PlayerAttachment p in players)
+        try
         {
-            if (Vector3.Distance(p.transform.position, transform.position) < distance)
+            attachedPlayer = FindObjectOfType<PlayerAttachment>().gameObject;
+
+            PlayerAttachment[] players = FindObjectsOfType<PlayerAttachment>();
+            attachedPlayer = players[0].gameObject;
+            float distance = Vector3.Distance(transform.position, attachedPlayer.transform.position);
+            foreach (PlayerAttachment p in players)
             {
-                distance = Vector3.Distance(p.transform.position, transform.position);
-                attachedPlayer = p.transform.gameObject;
+                if (Vector3.Distance(p.transform.position, transform.position) < distance)
+                {
+                    distance = Vector3.Distance(p.transform.position, transform.position);
+                    attachedPlayer = p.transform.gameObject;
+                }
             }
+        }
+        catch
+        {
+            return;
         }
     }
 }

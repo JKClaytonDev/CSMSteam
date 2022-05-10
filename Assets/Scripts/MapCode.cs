@@ -29,7 +29,7 @@ public class MapCode : MonoBehaviour
             c.transform.parent = CloneButton.transform.parent;
             yPos -= 150;
             c.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            Debug.Log(path + " PATH LENGTH IS " + path.Length + " FULL LENGTH IS " + s.Length);
+            //Debug.Log(path + " PATH LENGTH IS " + path.Length + " FULL LENGTH IS " + s.Length);
             string finalVer = s;
             c.gameObject.GetComponent<MapSelectButton>().ItemName = finalVer;
             c.gameObject.GetComponent<MapSelectButton>().finalName = Path.GetFileName(s);

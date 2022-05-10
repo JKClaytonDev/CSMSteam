@@ -91,7 +91,7 @@ namespace Dummiesman
                 byte imageType = r.ReadByte();
                 if (imageType != 10 && imageType != 2)
                 {
-                    Debug.LogError($"Unsupported targa image type. ({imageType})");
+                    //Debug.LogError($"Unsupported targa image type. ({imageType})");
                     return null;
                 }
 

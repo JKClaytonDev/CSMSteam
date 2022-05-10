@@ -7,7 +7,7 @@ public class WorldSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(PlayerPrefs.GetString("CurrentWorld"));
+        //Debug.Log(PlayerPrefs.GetString("CurrentWorld"));
         foreach (Transform t in transform)
         {
             if (t.gameObject.GetComponent<World>())

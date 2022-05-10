@@ -8,11 +8,16 @@ public class SetAchievement : MonoBehaviour
 
     private void OnEnable()
     {
-        bool tutorialCompleted;
-        Steamworks.SteamUserStats.GetAchievement(check, out tutorialCompleted);
-        if (tutorialCompleted == false)
+        if (PlayerPrefs.GetInt("Missions") != 1 && PlayerPrefs.GetInt(check) != 1)
         {
-            Steamworks.SteamUserStats.SetAchievement(check);
+            PlayerPrefs.SetInt(check, 1);
+            bool tutorialCompleted;
+            Steamworks.SteamUserStats.GetAchievement(check, out tutorialCompleted);
+            if (tutorialCompleted == false)
+            {
+                Steamworks.SteamUserStats.SetAchievement(check);
+                Steamworks.SteamUserStats.RequestCurrentStats();
+            }
         }
     }
 }

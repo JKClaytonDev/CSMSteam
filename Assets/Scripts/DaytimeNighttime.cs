@@ -21,7 +21,7 @@ public class DaytimeNighttime : MonoBehaviour
         char[] mins = minute.ToCharArray();
         string c = ""+mins[minute.Length - 1];
         int min = int.Parse(c); ;
-        Debug.Log("MINUTE IS " + min);
+        //Debug.Log("MINUTE IS " + min);
         bool lastActive = s.activeInHierarchy;
         s.SetActive(min == 0);
         GetComponent<PlayerMovement>().nightTime = (min == 0);

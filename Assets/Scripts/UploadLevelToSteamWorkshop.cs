@@ -37,13 +37,13 @@ public class UploadLevelToSteamWorkshop : MonoBehaviour
     public void SubmitToWorkshop()
     {
         appID = (uint)SteamUtils.GetAppID();
-        Debug.Log("UPLOADING TO WORKSHOP");
+        //Debug.Log("UPLOADING TO WORKSHOP");
         if (File.Exists(path))
         {
-            Debug.Log("FILE EXISTS");
+            //Debug.Log("FILE EXISTS");
             if (SteamManager.Initialized)
             {
-                Debug.Log("STEAMMANAGER INITIALIZED");
+                //Debug.Log("STEAMMANAGER INITIALIZED");
                 createCallRes = CallResult<CreateItemResult_t>.Create(OnCreateItem);
                 SteamAPICall_t handle = SteamUGC.CreateItem(new AppId_t(appID), EWorkshopFileType.k_EWorkshopFileTypeCommunity);
                 createCallRes.Set(handle);
@@ -53,21 +53,21 @@ public class UploadLevelToSteamWorkshop : MonoBehaviour
 
     void OnCreateItem(CreateItemResult_t pCallback, bool bIOFaliure)
     {
-        Debug.Log("CREATING ITEM");
+        //Debug.Log("CREATING ITEM");
         if (!pCallback.m_bUserNeedsToAcceptWorkshopLegalAgreement)
         {
             updateHandle = SteamUGC.StartItemUpdate(new AppId_t(appID), pCallback.m_nPublishedFileId);
             SteamUGC.SetItemTitle(updateHandle, title);
             SteamUGC.SetItemDescription(updateHandle, description);
-            Debug.Log("PATH IS + " + path);
+            //Debug.Log("PATH IS + " + path);
             SteamUGC.SetItemContent(updateHandle, path);
-            Debug.Log("SENT");
+            //Debug.Log("SENT");
             if (File.Exists(previewImagePath))
                 SteamUGC.SetItemPreview(updateHandle, previewImagePath);
             SteamUGC.SetItemVisibility(updateHandle, 0);
             SteamUGC.SubmitItemUpdate(updateHandle, "New workshop item");
             SteamFriends.ActivateGameOverlayToWebPage("steam://url/CommunityFilePage/" + pCallback.m_nPublishedFileId);
-            Debug.Log("CONFIRMED " + SteamUGC.GetItemInstallInfo(pCallback.m_nPublishedFileId, out ulong SizeOnDisk, out string Folder, 1024, out uint punTimeStamp));
+            //Debug.Log("CONFIRMED " + SteamUGC.GetItemInstallInfo(pCallback.m_nPublishedFileId, out ulong SizeOnDisk, out string Folder, 1024, out uint punTimeStamp));
         }
         else
         {

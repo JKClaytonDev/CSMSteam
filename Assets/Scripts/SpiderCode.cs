@@ -38,13 +38,13 @@ public class SpiderCode : MonoBehaviour
 
         for (int i = 0; i < list.Length; i++)
         {
-            Debug.Log("Starting Test " + list[i].gameObject.name);
+            //Debug.Log("Starting Test " + list[i].gameObject.name);
             float tempDistance = Vector3.Distance(transform.position, list[i].transform.position);
             if (list[i] != this.gameObject.GetComponent<enemyHealth>() && tempDistance < distance)
             {
 
                 distance = tempDistance;
-                Debug.Log("TESTING DISTANCE " + list[i].gameObject.name + " DISTANCE IS " + distance);
+                //Debug.Log("TESTING DISTANCE " + list[i].gameObject.name + " DISTANCE IS " + distance);
                 closestEnemy = list[i].gameObject;
             }
             player = closestEnemy;

@@ -15,7 +15,7 @@ public class hideCanvas : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("INSIDE");
+        //Debug.Log("INSIDE");
         c.enabled = false;
     }
 

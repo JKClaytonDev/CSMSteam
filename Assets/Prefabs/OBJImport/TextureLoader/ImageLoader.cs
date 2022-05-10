@@ -131,7 +131,7 @@ namespace Dummiesman
                     }
                     else
                     {
-                        Debug.LogError("Could not load crunched texture " + name + " because its format is not supported (" + crnFormatByte + "): " + fn);
+                        //Debug.LogError("Could not load crunched texture " + name + " because its format is not supported (" + crnFormatByte + "): " + fn);
                         break;
                     }
 
@@ -141,7 +141,7 @@ namespace Dummiesman
 
                     break;
                 default:
-                    Debug.LogError("Could not load texture " + name + " because its format is not supported : " + fn);
+                    //Debug.LogError("Could not load texture " + name + " because its format is not supported : " + fn);
                     break;
             }
             

@@ -50,7 +50,7 @@ public class WeaponsAnim : MonoBehaviour
     }
     public void drink()
     {
-        Debug.Log("DRINK");
+        //Debug.Log("DRINK");
         FindObjectOfType<PlayerAnimations>().goblin = true;
     }
     public void refillAmmo()
@@ -201,7 +201,7 @@ public class WeaponsAnim : MonoBehaviour
             cbp.x *= -1;
         if (Time.realtimeSinceStartup < whipTime)
             return;
-        Debug.Log("FIRE");
+        //Debug.Log("FIRE");
         if (weaponNum == 9 || FindObjectOfType<PlayerAnimations>().whipFire || FindObjectOfType<PlayerAnimations>().gunAnim.GetCurrentAnimatorStateInfo(0).IsName("WhipFire"))
         {
             whipTime = Time.realtimeSinceStartup + 0.1f;
@@ -212,16 +212,16 @@ public class WeaponsAnim : MonoBehaviour
             k.transform.rotation = player.transform.rotation;
             k.transform.Rotate(0, 0, 45);
             Destroy(k, 1);
-            Debug.Log("WHIP CHECK");
+            //Debug.Log("WHIP CHECK");
             Collider[] hitColliders = Physics.OverlapSphere(player.transform.position + player.transform.forward * 4, 8);
             foreach (Collider c in hitColliders)
             {
-                Debug.Log("WHIP ENEMY INSIDE");
+                //Debug.Log("WHIP ENEMY INSIDE");
                 if (c.transform.gameObject.GetComponent<enemyHealth>())
                 {
                     c.transform.gameObject.GetComponent<enemyHealth>().stunTime = Time.realtimeSinceStartup + 0.2f;
                     c.transform.gameObject.GetComponent<enemyHealth>().colorTime = Time.realtimeSinceStartup + 0.3f;
-                    Debug.Log("ENEMY WHIP");
+                    //Debug.Log("ENEMY WHIP");
                     if (c.transform.gameObject.GetComponent<ZombieScript>())
                     {
                         if (c.transform.gameObject.GetComponent<ZombieScript>().skullFrag)
@@ -237,10 +237,10 @@ public class WeaponsAnim : MonoBehaviour
                         }
                     }
                     c.transform.position -= transform.forward;
-                    Debug.Log("bullet hit");
+                    //Debug.Log("bullet hit");
                     if (c.transform.gameObject.GetComponent<enemyHealth>().hitSound)
                         FindObjectOfType<UniversalAudio>().playSound(c.transform.gameObject.GetComponent<enemyHealth>().hitSound);
-                    Debug.Log("HIT ENEMY");
+                    //Debug.Log("HIT ENEMY");
                     enemyHealth he = c.transform.gameObject.GetComponent<enemyHealth>();
                     he.currentHealth -= he.damages[1] * 2;
                     if (he.currentHealth >= 0)
@@ -260,7 +260,7 @@ public class WeaponsAnim : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(gunSounds[weaponNum]);
 
-            Debug.Log("firing");
+            //Debug.Log("firing");
             GameObject g = Instantiate(bullet);
 
             RaycastHit hit;

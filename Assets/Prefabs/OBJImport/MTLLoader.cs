@@ -117,7 +117,7 @@ public class MTLLoader {
         int texNameCmpIdx = GetTexNameIndex(splitLine);
         if(texNameCmpIdx < 0)
         {
-            Debug.LogError($"texNameCmpIdx < 0 on line {processedLine}. Texture not loaded.");
+            //Debug.LogError($"texNameCmpIdx < 0 on line {processedLine}. Texture not loaded.");
             return null;
         }
 

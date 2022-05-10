@@ -15,14 +15,22 @@ public class ghostCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!GetComponent<closePlayer>())
-            gameObject.AddComponent<closePlayer>();
-        closePlayerObject = GetComponent<closePlayer>();
-        coldBreath = GameObject.Find("ColdBreath");
-        magicAnim = FindObjectOfType<PlayerAnimations>().magicAnim;
-        startXscale = transform.localScale.x;
-        player = FindObjectOfType<PlayerMovement>().gameObject;
-        child.SetActive(false);
+        try
+        {
+            if (!GetComponent<closePlayer>())
+                gameObject.AddComponent<closePlayer>();
+            closePlayerObject = GetComponent<closePlayer>();
+            coldBreath = GameObject.Find("ColdBreath");
+
+            magicAnim = FindObjectOfType<PlayerAnimations>().magicAnim;
+            startXscale = transform.localScale.x;
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+            child.SetActive(false);
+        }
+        catch
+        {
+            return;
+        }
     }
 
     // Update is called once per frame
@@ -30,12 +38,19 @@ public class ghostCode : MonoBehaviour
     {
         if (closePlayerObject)
             player = closePlayerObject.attachedPlayer;
-        if (Vector3.Distance(transform.position, player.transform.position) < 2)
+        try
         {
-            
-            Instantiate(gotcha);
-            Destroy(gameObject);
-            FindObjectOfType<PlayerVoices>().GhostGotcha();
+            if (Vector3.Distance(transform.position, player.transform.position) < 2)
+            {
+
+                Instantiate(gotcha);
+                Destroy(gameObject);
+                FindObjectOfType<PlayerVoices>().GhostGotcha();
+            }
+        }
+        catch
+        {
+            return;
         }
         float lastY = transform.position.y;
         if (Vector3.Distance(transform.position, player.transform.position) < 45 && !child.activeInHierarchy)

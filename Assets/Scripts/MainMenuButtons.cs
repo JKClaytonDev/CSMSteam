@@ -15,6 +15,7 @@ public class MainMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Classic.isOn = false;
         Hardcore.isOn = false;
         BossRush.isOn = false;
@@ -23,19 +24,19 @@ public class MainMenuButtons : MonoBehaviour
         if (!PlayerPrefs.HasKey("vol"))
         {
             PlayerPrefs.SetFloat("vol", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         AudioListener.volume = PlayerPrefs.GetFloat("vol") / 100;
-        Debug.Log("GET VOLUME " + PlayerPrefs.GetFloat("vol"));
+        //Debug.Log("GET VOLUME " + PlayerPrefs.GetFloat("vol"));
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         if (!PlayerPrefs.HasKey("VoiceVolume"))
         {
             PlayerPrefs.SetFloat("VoiceVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         if (!PlayerPrefs.HasKey("FOV"))
             PlayerPrefs.SetFloat("FOV", 90);
@@ -56,12 +57,12 @@ public class MainMenuButtons : MonoBehaviour
         if (!PlayerPrefs.HasKey("MusicVolume"))
         {
             PlayerPrefs.SetFloat("MusicVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         if (!PlayerPrefs.HasKey("VoiceVolume"))
         {
             PlayerPrefs.SetFloat("VoiceVolume", 100);
-            Debug.Log("NO KEY");
+            //Debug.Log("NO KEY");
         }
         if (sound)
         {

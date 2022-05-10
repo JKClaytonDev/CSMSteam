@@ -1962,7 +1962,6 @@ RectTransform:
   - {fileID: 8198002705796385235}
   - {fileID: 8198002705682869030}
   - {fileID: 3885707210866440539}
-  - {fileID: 9010391830003760533}
   - {fileID: 8198002705197762127}
   - {fileID: 8198002707144639780}
   - {fileID: 8198002705547050115}
@@ -2630,12 +2629,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3885707210137820356}
+  m_Father: {fileID: 8198002707144639780}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -79.5}
+  m_AnchoredPosition: {x: 144.41998, y: -123.72}
   m_SizeDelta: {x: 555, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1642687670730292666
@@ -2679,7 +2678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Motion Blur and Lighting require level restart
+  m_Text: 'A/O and Lighting require level restart
 
 '
 --- !u!1 &7473282920349347702
@@ -10957,6 +10956,7 @@ RectTransform:
   - {fileID: 8198002706444916320}
   - {fileID: 2248864430310273272}
   - {fileID: 8198002705603742164}
+  - {fileID: 9010391830003760533}
   m_Father: {fileID: 3885707210137820356}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11496,7 +11496,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 8198002707144639780}
     m_Modifications:
     - target: {fileID: 9035347577993533088, guid: eff159c539c82214ca48105a7b4aa9e6, type: 3}
@@ -11597,6 +11597,7 @@ PrefabInstance:
       objectReference: {fileID: 3395157759591381099}
     m_RemovedComponents: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eff159c539c82214ca48105a7b4aa9e6, type: 3}
 --- !u!224 &910053432767270856 stripped
 RectTransform:

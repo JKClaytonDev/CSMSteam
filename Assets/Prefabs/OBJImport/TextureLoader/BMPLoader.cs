@@ -143,12 +143,12 @@ namespace B83.Image.BMP
             BMPImage bmp = new BMPImage();
             if (!ReadFileHeader(aReader, ref bmp.header))
             {
-                Debug.LogError("Not a BMP file");
+                //Debug.LogError("Not a BMP file");
                 return null;
             }
             if (!ReadInfoHeader(aReader, ref bmp.info))
             {
-                Debug.LogError("Unsupported header format");
+                //Debug.LogError("Unsupported header format");
                 return null;
             }
             if (bmp.info.compressionMethod != BMPComressionMode.BI_RGB
@@ -158,7 +158,7 @@ namespace B83.Image.BMP
                 && bmp.info.compressionMethod != BMPComressionMode.BI_RLE8
                 )
             {
-                Debug.LogError("Unsupported image format: " + bmp.info.compressionMethod);
+                //Debug.LogError("Unsupported image format: " + bmp.info.compressionMethod);
                 return null;
             }
             long offset = 14 + bmp.info.size;
@@ -204,7 +204,7 @@ namespace B83.Image.BMP
                 ReadIndexedImage(aReader, bmp);
             else
             {
-                Debug.LogError("Unsupported file format: " + bmp.info.compressionMethod + " BPP: " + bmp.info.nBitsPerPixel);
+                //Debug.LogError("Unsupported file format: " + bmp.info.compressionMethod + " BPP: " + bmp.info.nBitsPerPixel);
                 return null;
             }
             return bmp;
@@ -218,7 +218,7 @@ namespace B83.Image.BMP
             Color32[] data = bmp.imageData = new Color32[w * h];
             if (aReader.BaseStream.Position + w * h * 4 > aReader.BaseStream.Length)
             {
-                Debug.LogError("Unexpected end of file.");
+                //Debug.LogError("Unexpected end of file.");
                 return;
             }
             int shiftR = GetShiftCount(bmp.rMask);
@@ -249,7 +249,7 @@ namespace B83.Image.BMP
             Color32[] data = bmp.imageData = new Color32[w * h];
             if (aReader.BaseStream.Position + count > aReader.BaseStream.Length)
             {
-                Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
+                //Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
                 return;
             }
             int shiftR = GetShiftCount(bmp.rMask);
@@ -280,7 +280,7 @@ namespace B83.Image.BMP
             Color32[] data = bmp.imageData = new Color32[w * h];
             if (aReader.BaseStream.Position + count > aReader.BaseStream.Length)
             {
-                Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
+                //Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
                 return;
             }
             int shiftR = GetShiftCount(bmp.rMask);
@@ -316,7 +316,7 @@ namespace B83.Image.BMP
             Color32[] data = bmp.imageData = new Color32[w * h];
             if (aReader.BaseStream.Position + count > aReader.BaseStream.Length)
             {
-                Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
+                //Debug.LogError("Unexpected end of file. (Have " + (aReader.BaseStream.Position + count) + " bytes, expected " + aReader.BaseStream.Length + " bytes)");
                 return;
             }
             BitStreamReader bitReader = new BitStreamReader(aReader);
@@ -327,7 +327,7 @@ namespace B83.Image.BMP
                     int v = (int)bitReader.ReadBits(bitCount);
                     if (v >= bmp.palette.Count)
                     {
-                        Debug.LogError("Indexed bitmap has indices greater than it's color palette");
+                        //Debug.LogError("Indexed bitmap has indices greater than it's color palette");
                         return;
                     }
                     data[x + y * w] = bmp.palette[v];

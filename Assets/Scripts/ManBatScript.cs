@@ -49,7 +49,7 @@ public class ManBatScript : MonoBehaviour
             randomTime += randomTimeSlot;
             if (!spread)
             {
-                Debug.Log("BAT ATTACK");
+                //Debug.Log("BAT ATTACK");
                 GetComponent<Animator>().Play("ManBatAttack");
             }
             else

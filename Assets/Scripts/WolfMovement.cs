@@ -44,14 +44,16 @@ public class WolfMovement : MonoBehaviour
     }
     void OnCollisionStay(Collision collision)
     {
-        Debug.Log(collision.gameObject.name + "ASF");
+        //Debug.Log(collision.gameObject.name + "ASF");
         if (collision.gameObject.layer == 12 || collision.gameObject.name == "LAVA")
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     // Update is called once per frame
     void Update()
     {
-        child.GetComponent<Camera>().fieldOfView = 90;
+        if (Time.timeScale == 0)
+            return;
+        child.GetComponent<Camera>().fieldOfView = PlayerPrefs.GetFloat("FOV");
         if (ammo < 0)
             ammo = 0;
         idle.gameObject.GetComponent<RectTransform>().localPosition = new Vector2((Mathf.Sin(transform.position.x/ 5) + Mathf.Cos(transform.position.z/5))*30, -386 + (Mathf.Cos(transform.position.x/10) + Mathf.Sin(transform.position.z/10) - 2) * 10);
@@ -59,21 +61,6 @@ public class WolfMovement : MonoBehaviour
         float speed = 1;
        
             speed = 1.5f;
-        mouseSensitivity = PlayerPrefs.GetFloat("Mouse");
-        if (menu.GetComponent<Menu>().active)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            Time.timeScale = 0;
-            return;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Time.timeScale = 1;
-
-        }
         if (health <= 0)
         {
             health = 0;
@@ -93,9 +80,17 @@ public class WolfMovement : MonoBehaviour
             equippedWeapon = lastweapon;
         fire.sprite = fireMats[equippedWeapon];
         idle.sprite = idleMats[equippedWeapon];
+        float sens = PlayerPrefs.GetFloat("MouseSens");
+        float MSensM = 0.5f;
+        if (Input.GetMouseButton(1))
+            MSensM = 0.3f;
+        int rv = 1;
+        int flipped = 1;
+        float MY = -Input.GetAxis("Mouse Y") * 6 * MSensM * rv * sens / 15;
+        float MX = Input.GetAxis("Mouse X") * 6 * MSensM * rv * flipped * sens / 15;
 
-        transform.Rotate(0, Input.GetAxis("Mouse X")*mouseSensitivity, 0);
-        child.transform.Rotate(-Input.GetAxis("Mouse Y")* mouseSensitivity, 0, 0);
+        transform.Rotate(0, MX * Time.timeScale, 0);
+        child.transform.Rotate(MY * Time.timeScale, 0, 0);
         GetComponent<Rigidbody>().velocity = (Input.GetAxis("Vertical") * transform.forward + Input.GetAxis("Horizontal") * transform.right)*(10 * speed) + GetComponent<Rigidbody>().velocity.y * transform.up;
         if (Input.GetMouseButtonDown(0) && ammo > 0)
         {

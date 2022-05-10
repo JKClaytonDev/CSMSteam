@@ -26,7 +26,7 @@ public class MapSelectButton : MonoBehaviour
         PlayerPrefs.SetString("MapEditor", ItemName);
         FindObjectOfType<MapData>().mapData = ItemName;
         PlayerPrefs.Save();
-        Debug.Log("PLAYERPREFS " + PlayerPrefs.GetString("MapEditor"));
+        //Debug.Log("PLAYERPREFS " + PlayerPrefs.GetString("MapEditor"));
         PlayerPrefs.Save();
         levelName.text = finalName;
         //SceneManager.LoadScene("  ");

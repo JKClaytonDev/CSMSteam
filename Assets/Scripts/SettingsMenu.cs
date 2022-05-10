@@ -28,26 +28,38 @@ public class SettingsMenu : MonoBehaviour
     // Update is called once per frame
     public void resume()
     {
+        if (!player)
+        {
+            gameObject.SetActive(false);
+        }
         toggle = !toggle;
         if (toggle)
         {
+            Time.timeScale = 0;
+            if (wepCanvas)
             wepCanvas.enabled = false;
             settings.SetActive(true);
             Cursor.visible = true;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
-            MoneyCanvas.enabled = false;
-            crosshairCanvas.enabled = false;
+            if (MoneyCanvas)
+                MoneyCanvas.enabled = false;
+            if (crosshairCanvas)
+                crosshairCanvas.enabled = false;
         }
         else
         {
-            wepCanvas.enabled = true;
+            Time.timeScale = 1;
+            if (wepCanvas)
+                wepCanvas.enabled = true;
             Time.timeScale = 1;
             player.SetActive(true);
             settings.SetActive(false);
             Cursor.visible = false;
-            MoneyCanvas.enabled = true;
-            crosshairCanvas.enabled = true;
+            if (MoneyCanvas)
+                MoneyCanvas.enabled = true;
+            if (crosshairCanvas)
+                crosshairCanvas.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
@@ -57,5 +69,7 @@ public class SettingsMenu : MonoBehaviour
         {
             resume();
         }
+        if (toggle)
+            Time.timeScale = 0;
     }
 }

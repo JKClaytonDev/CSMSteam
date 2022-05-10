@@ -16,7 +16,7 @@ public class DoorTriggerEnemy : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("TRIGGERED BY OBJECT " + other.name);
+        //Debug.Log("TRIGGERED BY OBJECT " + other.name);
         if (other.gameObject.GetComponent<enemyHealth>() || other.gameObject.GetComponent<enemyLink>())
             enemyTime = Time.realtimeSinceStartup + 1;
     }

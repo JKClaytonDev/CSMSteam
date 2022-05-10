@@ -50,7 +50,7 @@ public class DoorLoadScene : MonoBehaviour
             string scene = SceneManager.GetActiveScene().name;
             int finalChar = int.Parse(scene.ToCharArray()[scene .Length- 1] +"");
             string newScene = scene.Substring(0, scene.Length - 1) + (finalChar + 1);
-            Debug.Log("NEW SCENE IS" + newScene);
+            //Debug.Log("NEW SCENE IS" + newScene);
             if (Application.CanStreamedLevelBeLoaded(newScene))
             {
                 PlayerPrefs.SetString("LoadingScreenScene", newScene);

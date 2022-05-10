@@ -27,12 +27,12 @@ public class MaxHealthIncrease : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HIT HEART2 ");
+        //Debug.Log("HIT HEART2 ");
         if (other.name.Contains("Player"))
         {
 
             FindObjectOfType<PlayerMovement>().GetComponent<AudioSource>().PlayOneShot(sound);
-            Debug.Log("HIT HEART");
+            //Debug.Log("HIT HEART");
             PlayerPrefs.SetInt("FoundHeart"+SceneManager.GetActiveScene().name, 1);
             PlayerPrefs.SetFloat("MaxHealth", PlayerPrefs.GetFloat("MaxHealth")+10);
             PlayerPrefs.Save();

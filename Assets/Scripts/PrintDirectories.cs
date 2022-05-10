@@ -19,13 +19,13 @@ public class PrintDirectories : MonoBehaviour
         Content.ClearOptions();
 
         baseDir = Application.dataPath + "\\Addons\\";
-        Debug.Log("BASE" + baseDir.Length);
+        //Debug.Log("BASE" + baseDir.Length);
         ContentOptions = new List<string>();
 
         foreach (string file in Directory.GetDirectories(@baseDir))
         {
             string newFile = file.Substring(baseDir.Length, file.Length - baseDir.Length);
-            Debug.Log("FILE" + newFile.Substring(0, 4));
+            //Debug.Log("FILE" + newFile.Substring(0, 4));
             if (newFile.Substring(0, 4) == "Mod_")
             {
                 ContentOptions.Add(newFile.Substring(4, newFile.Length-4));
@@ -43,17 +43,17 @@ public class PrintDirectories : MonoBehaviour
     {
         title.text = ContentOption;
         string fileName = baseDir + "\\Mod_" + ContentOption + "\\ModIcon.jpg";
-        Debug.Log("FILE NAME " + fileName);
+        //Debug.Log("FILE NAME " + fileName);
         byte[] bytes = File.ReadAllBytes(fileName);
         Texture2D LoadedImage = new Texture2D(2, 2);
         if (LoadedImage.LoadImage(bytes))
         {
-            Debug.Log(LoadedImage.ToString());
+            //Debug.Log(LoadedImage.ToString());
             I.texture = LoadedImage;
         }
         string descriptionName = baseDir + "\\Mod_" + ContentOption + "\\ShortDescription.txt";
         description.text = System.Text.Encoding.UTF8.GetString(File.ReadAllBytes(descriptionName));
-        PlayerPrefs.SetString("GivenDirectory", baseDir + "\\" + ContentOption);
+        PlayerPrefs.SetString("GivenDirectory", baseDir + "\\" + "Mod_" + ContentOption);
         PlayerPrefs.Save();
     }
 

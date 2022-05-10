@@ -26,7 +26,7 @@ public class SteamWorkshopDownload : MonoBehaviour
                 foreach (PublishedFileId_t i in PublishedFileID)
                 {
                     installedStuff = SteamUGC.GetItemInstallInfo(i, out ulong SizeOnDisk, out string Folder, 1024, out uint punTimeStamp);
-                    Debug.Log("INSTALLEDSTUFF " + installedStuff);
+                    //Debug.Log("INSTALLEDSTUFF " + installedStuff);
                     if (installedStuff)
                     {
                         
@@ -43,7 +43,7 @@ public class SteamWorkshopDownload : MonoBehaviour
                                 levels.Add(fullPath);
                             }
 
-                            Debug.Log(fullPath);
+                            //Debug.Log(fullPath);
                             System.IO.File.Copy(fullPath, destPath, true);
                         }
                     }

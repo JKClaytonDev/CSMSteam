@@ -28,7 +28,7 @@ public class stoptesting : MonoBehaviour
             t.GetComponent<MeshRenderer>().enabled = true;
             t.GetComponent<SphereCollider>().enabled = true;
         }
-        Debug.Log("DEACTIVATED");
+        //Debug.Log("DEACTIVATED");
         gameObject.SetActive(false);
     }
 

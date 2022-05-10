@@ -52,7 +52,7 @@ public class SnakeAI : MonoBehaviour
 
             if (Vector3.Distance(bonePos[i], target) > distances[i])
             {
-                Debug.Log("MOVING");
+                //Debug.Log("MOVING");
                 bonePos[i] = Vector3.MoveTowards(bonePos[i], target, Vector3.Distance(bonePos[i], target) - distances[i]);
             }
             

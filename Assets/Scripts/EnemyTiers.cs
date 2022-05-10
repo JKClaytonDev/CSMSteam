@@ -28,7 +28,7 @@ public class EnemyTiers : MonoBehaviour
         allEnemies = FindObjectsOfType<GameObject>();
         foreach (GameObject h in allEnemies)
         {
-            Debug.Log("REPLACED");
+            //Debug.Log("REPLACED");
             GameObject[] pool = FindEnemy(h);
             if (pool.Length > 0)
             {
@@ -43,7 +43,7 @@ public class EnemyTiers : MonoBehaviour
 
     public GameObject[] FindEnemy(GameObject h)
     {
-        Debug.Log("FINDING ENEMY");
+        //Debug.Log("FINDING ENEMY");
         GameObject[] selected = { };
         if (searchEnemy(h, tier1))
             selected = tier1;
@@ -65,7 +65,7 @@ public class EnemyTiers : MonoBehaviour
         {
                 if (h.gameObject.name.Contains(k.name))
                 {
-                    Debug.Log("FOUND");
+                    //Debug.Log("FOUND");
                     return true;
                 }
         }

@@ -92,6 +92,8 @@ public class PlayerAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
         if (Input.GetKey(PlayerPrefs.GetString("WhipKeybind")) && !magicAnim.GetBool("FlashLight") && !Input.GetKey(PlayerPrefs.GetString("FlashlightKeybind")) && !magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold") && Time.realtimeSinceStartup > whipTime)
         {
             whipTime = Time.realtimeSinceStartup + 1.5f;
@@ -248,7 +250,7 @@ public class PlayerAnimations : MonoBehaviour
                 if (Time.timeScale > 0.5f){
                 if (FindObjectOfType<WeaponsAnim>().playerAmmo > 0)
                     gunAnim.Play(gunName + "Fire");
-                Debug.Log("SHOOT");
+                //Debug.Log("SHOOT");
                 }
             }
             else if (gunName == "Sniper" && Input.GetKey(PlayerPrefs.GetString("MeleeKeybind")))
@@ -269,7 +271,7 @@ public class PlayerAnimations : MonoBehaviour
             }
             else {
                 gunAnim.Play(gunName + "Idle");
-                Debug.Log("IDLE");
+                //Debug.Log("IDLE");
             }
         }
         gunAnim.SetBool("Fire", Input.GetMouseButton(0));
@@ -293,7 +295,7 @@ public class PlayerAnimations : MonoBehaviour
         wepIndex = gun;
         gunName = wepNames[gun];
         gunAnim.Play(gunName + "Equip");
-        Debug.Log("LOCKING GUN " + gunName);
+        //Debug.Log("LOCKING GUN " + gunName);
         return;
     }
 }

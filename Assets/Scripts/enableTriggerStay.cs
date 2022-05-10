@@ -8,7 +8,7 @@ public class enableTriggerStay : MonoBehaviour
     public float time;
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject.name.Contains("Player"))
             time = Time.realtimeSinceStartup + 0.1f;
     }

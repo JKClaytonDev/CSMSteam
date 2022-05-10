@@ -57,7 +57,7 @@ public class runAtPlayer : MonoBehaviour
                     if (check && !found)
                     {
                         seenTime = Time.realtimeSinceStartup + seenDelay;
-                        Debug.Log("PLAYER SEEN!\n TIME IS" + Time.realtimeSinceStartup + "\nSEEN DELAY IS " + seenTime);
+                        //Debug.Log("PLAYER SEEN!\n TIME IS" + Time.realtimeSinceStartup + "\nSEEN DELAY IS " + seenTime);
                     }
                     if (check)
                         found = true;

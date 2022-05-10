@@ -34,10 +34,10 @@ public class replaceTextures : MonoBehaviour
                     */
                 string fileName = s + "\\" + m.mainTexture.name + ".png";
 
-                Debug.Log("THE FILE IS " + fileName);
+                //Debug.Log("THE FILE IS " + fileName);
                 if (System.IO.File.Exists(fileName))
                 {
-                    Debug.Log("FOUNDTEX" + fileName);
+                    //Debug.Log("FOUNDTEX" + fileName);
                     byte[] bytes = File.ReadAllBytes(fileName);
                     Texture2D LoadedImage = new Texture2D(2, 2);
                     if (LoadedImage.LoadImage(bytes))

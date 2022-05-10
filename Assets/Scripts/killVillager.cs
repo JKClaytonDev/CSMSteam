@@ -10,7 +10,7 @@ public class killVillager : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        Debug.Log("MATERIAL NAME IS " + m.material.name + "CONTAINS" + m.material.name.Contains("Village"));
+        //Debug.Log("MATERIAL NAME IS " + m.material.name + "CONTAINS" + m.material.name.Contains("Village"));
         if (!(m.material.name.Contains("Village")))
         {
             Destroy(e);

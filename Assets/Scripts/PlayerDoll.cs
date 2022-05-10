@@ -5,16 +5,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerDoll : MonoBehaviour
 {
+    float speakTextLength;
+
     public AudioClip villagerSound;
     public AudioClip protoSound;
     public AudioClip playerSound;
     public AudioClip dollSound;
 
-    bool hasSound;
-
     string speakMessage;
     float talkMessageTime;
-
+    string targetText;
     public AudioClip sound;
     int set;
     public GameObject SpeakText;
@@ -60,6 +60,15 @@ public class PlayerDoll : MonoBehaviour
         {
             FindObjectOfType<MusicManager>().GetComponent<AudioSource>().volume = 0.3f * PlayerPrefs.GetFloat("MusicVolume") / 100;
         }
+
+        if (sounds[textIndex] && GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().Stop();
+            if (SpeakText)
+                SpeakText.SetActive(false);
+            speakTextLength = sounds[textIndex].length / textIndexes[textIndex].Length/4;
+            GetComponent<AudioSource>().PlayOneShot(sounds[textIndex], 3);
+        }
     }
 
     // Update is called once per frame
@@ -78,39 +87,39 @@ public class PlayerDoll : MonoBehaviour
             Time.timeScale = 1;
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying))
+        if (((Input.GetKeyDown(KeyCode.Space) && textIndex >= sounds.Length) || (textIndex < sounds.Length && !GetComponent<AudioSource>().isPlaying)) && !GetComponent<AudioSource>().isPlaying)
         {
             textIndex++;
+            targetText = textIndexes[textIndex];
             speakMessage = "";
             if (imageIndexes[textIndex] == dollSprite)
                 anim.Play("DollTalk");
             if (GetComponent<AudioSource>() && !sounds[textIndex])
                 GetComponent<AudioSource>().PlayOneShot(sound);
-
-        }
-
-        changeImage.sprite = imageIndexes[textIndex];
-        if (changeText.text != textIndexes[textIndex])
-        {
-            changeText.text = speakMessage;
+            speakTextLength = 0.01f;
             if (sounds.Length == textIndexes.Length)
             {
                 if (sounds[textIndex] && GetComponent<AudioSource>())
                 {
                     GetComponent<AudioSource>().Stop();
                     if (SpeakText)
-                    SpeakText.SetActive(false);
+                        SpeakText.SetActive(false);
+                    speakTextLength = (sounds[textIndex].length/textIndexes[textIndex].Length)/2;
                     GetComponent<AudioSource>().PlayOneShot(sounds[textIndex], 3);
                 }
             }
+
         }
+
+        changeImage.sprite = imageIndexes[textIndex];
+        changeText.text = speakMessage;
 
         if (Time.realtimeSinceStartup > talkMessageTime && speakMessage != textIndexes[textIndex])
         {
             speakMessage = textIndexes[textIndex].Substring(0, speakMessage.Length + 1);
-            talkMessageTime = Time.realtimeSinceStartup + 0.03f;
+            talkMessageTime = Time.realtimeSinceStartup + speakTextLength;
             float volume = 0.5f;
-            if (set % 4 == 0)
+            if (set % 8 == 0)
             {
                 if (imageIndexes[textIndex].name.Contains("Doll"))
                     GetComponent<AudioSource>().PlayOneShot(dollSound, volume);

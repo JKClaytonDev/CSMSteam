@@ -19,7 +19,7 @@ public class MoneyBag : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("JUST HIT " + other);
+        //Debug.Log("JUST HIT " + other);
         if (other.gameObject.layer == 11)
         {
             if (Time.realtimeSinceStartup < FindObjectOfType<PlayerVoices>().playTime)

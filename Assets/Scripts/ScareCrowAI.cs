@@ -29,7 +29,14 @@ public class ScareCrowAI : MonoBehaviour
         startpos = transform.position;
         rb = GetComponent<Rigidbody>();
        ren = GetComponent<MeshRenderer>();
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        try
+        {
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+        }
+        catch
+        {
+
+        }
         ln.SetPosition(0, transform.position);
         ln.SetPosition(1, transform.position);
     }
@@ -55,23 +62,31 @@ public class ScareCrowAI : MonoBehaviour
         else
             ren.material = up;
             GetComponent<enemyHealth>().enabled = true;
-        if (!hooked && lastCheckTime < Time.realtimeSinceStartup-1 && Vector3.Distance(transform.position, player.transform.position) < 25)
+        try
         {
-            lastCheckTime = Time.realtimeSinceStartup;
-            
-            Debug.Log("SCARECHECK");
-            RaycastHit hit;
-            Physics.Raycast(transform.position, Vector3.MoveTowards(transform.position, player.transform.position, 1) - transform.position, out hit);
-            if (hit.transform.gameObject.GetComponent<PlayerMovement>())
+            if (!hooked && lastCheckTime < Time.realtimeSinceStartup - 1 && Vector3.Distance(transform.position, player.transform.position) < 25)
             {
-                GameObject f = Instantiate(pole);
-                GetComponent<AudioSource>().PlayOneShot(sounds[0]);
-                pole.transform.position = transform.position + transform.forward * 0.2f;
-                hooked = true;
+                lastCheckTime = Time.realtimeSinceStartup;
+
+                //Debug.Log("SCARECHECK");
+                RaycastHit hit;
+                Physics.Raycast(transform.position, Vector3.MoveTowards(transform.position, player.transform.position, 1) - transform.position, out hit);
+                if (hit.transform.gameObject.GetComponent<PlayerMovement>())
+                {
+                    GameObject f = Instantiate(pole);
+                    GetComponent<AudioSource>().PlayOneShot(sounds[0]);
+                    pole.transform.position = transform.position + transform.forward * 0.2f;
+                    hooked = true;
+                }
             }
+            Vector3 ppos = player.transform.position;
+            ppos.y = transform.position.y;
         }
-        Vector3 ppos = player.transform.position;
-        ppos.y = transform.position.y;
+        catch
+        {
+
+        }
+        
         if (hooked)
         {
             if (lastCheckTime < Time.realtimeSinceStartup - 0.5f)
@@ -104,11 +119,18 @@ public class ScareCrowAI : MonoBehaviour
             pos = Vector3.MoveTowards(pos, (player.transform.position - Vector3.up), Time.deltaTime * 75);
             ln.SetPosition(1, pos);
         }
-        if (Vector3.Distance(transform.position, player.transform.position) > 35)
+        try
         {
-            hooked = false;
-            ln.enabled = false;
-        }
+            if (Vector3.Distance(transform.position, player.transform.position) > 35)
+            {
+                hooked = false;
+                ln.enabled = false;
+            }
             GetComponent<enemyHealth>().enabled = true;
+        }
+        catch
+        {
+
+        }
     }
 }

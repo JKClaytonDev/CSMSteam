@@ -25,9 +25,16 @@ public class removeParent : MonoBehaviour
             transform.localPosition += (1920 - (Shardcount * 75/1920)) * Vector3.up;
             transform.parent = null;
             transform.localScale = new Vector3(1, 1, 1) * Shardcount * 4;
+            return;
+        }
+        try
+        {
+            player = transform.parent.gameObject;
+        }
+        catch
+        {
 
         }
-        player = transform.parent.gameObject;
         transform.parent = null;
         if (setScale != new Vector3())
             transform.localScale = setScale;

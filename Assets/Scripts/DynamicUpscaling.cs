@@ -13,7 +13,7 @@ public class DynamicUpscaling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("BLUR IS " + PlayerPrefs.GetInt("MotionBlur"));
+        //Debug.Log("BLUR IS " + PlayerPrefs.GetInt("MotionBlur"));
         GetComponent<Toggle>().isOn = PlayerPrefs.GetInt("DisableDynamic") != 1;
         MotionBlur.isOn = PlayerPrefs.GetInt("MotionBlur") == 1;
         Lighting.isOn = PlayerPrefs.GetInt("DisableLighting") != 1;
@@ -45,7 +45,7 @@ public class DynamicUpscaling : MonoBehaviour
             PlayerPrefs.SetInt(s, 1);
         else
             PlayerPrefs.SetInt(s, 0);
-        Debug.Log("BLUR IS " + PlayerPrefs.GetInt("MotionBlur"));
+        //Debug.Log("BLUR IS " + PlayerPrefs.GetInt("MotionBlur"));
         PlayerPrefs.Save();
     }
     public void swapToggle()

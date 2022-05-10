@@ -9,7 +9,14 @@ public class SetVolume : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        transform.parent = FindObjectOfType<PlayerVoices>().gameObject.transform;
+        try
+        {
+            transform.parent = FindObjectOfType<PlayerVoices>().gameObject.transform;
+        }
+        catch
+        {
+           
+        }
         transform.localPosition = new Vector3();
         if (PlayerPrefs.GetInt("Missions") == 0)
         {

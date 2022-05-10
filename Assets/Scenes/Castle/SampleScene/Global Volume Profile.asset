@@ -197,120 +197,6 @@ MonoBehaviour:
   proceduralSoftness:
     m_OverrideState: 0
     m_Value: 0.5
---- !u!114 &-7227779268347242434
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9008a067f4d626c4d8bc4bc48f04bb89, type: 3}
-  m_Name: AmbientOcclusion
-  m_EditorClassIdentifier: 
-  active: 1
-  quality:
-    m_OverrideState: 1
-    m_Value: 3
-  rayTracing:
-    m_OverrideState: 1
-    m_Value: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 4
-  directLightingStrength:
-    m_OverrideState: 1
-    m_Value: 1
-  radius:
-    m_OverrideState: 1
-    m_Value: 2
-  spatialBilateralAggressiveness:
-    m_OverrideState: 1
-    m_Value: 0.15
-  temporalAccumulation:
-    m_OverrideState: 1
-    m_Value: 1
-  ghostingReduction:
-    m_OverrideState: 1
-    m_Value: 0.5
-  blurSharpness:
-    m_OverrideState: 1
-    m_Value: 0.1
-  layerMask:
-    m_OverrideState: 1
-    m_Value:
-      serializedVersion: 2
-      m_Bits: 2147483647
-  occluderMotionRejection:
-    m_OverrideState: 0
-    m_Value: 1
-  receiverMotionRejection:
-    m_OverrideState: 0
-    m_Value: 1
-  m_StepCount:
-    m_OverrideState: 1
-    m_Value: 16
-  m_FullResolution:
-    m_OverrideState: 1
-    m_Value: 1
-  m_MaximumRadiusInPixels:
-    m_OverrideState: 1
-    m_Value: 80
-  m_BilateralUpsample:
-    m_OverrideState: 1
-    m_Value: 1
-  m_DirectionCount:
-    m_OverrideState: 1
-    m_Value: 4
-  m_RayLength:
-    m_OverrideState: 1
-    m_Value: 20
-  m_SampleCount:
-    m_OverrideState: 1
-    m_Value: 64
-  m_Denoise:
-    m_OverrideState: 1
-    m_Value: 1
-  m_DenoiserRadius:
-    m_OverrideState: 1
-    m_Value: 1
---- !u!114 &-6681759701916401451
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31394aa05878563408489d5c1688f3a0, type: 3}
-  m_Name: PathTracing
-  m_EditorClassIdentifier: 
-  active: 1
-  enable:
-    m_OverrideState: 1
-    m_Value: 1
-  layerMask:
-    m_OverrideState: 1
-    m_Value:
-      serializedVersion: 2
-      m_Bits: 4294967295
-  maximumSamples:
-    m_OverrideState: 1
-    m_Value: 256
-  minimumDepth:
-    m_OverrideState: 1
-    m_Value: 1
-  maximumDepth:
-    m_OverrideState: 1
-    m_Value: 4
-  maximumIntensity:
-    m_OverrideState: 1
-    m_Value: 20.29
-  tilingParameters:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 0, w: 0}
 --- !u!114 &-6333958796991382011
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -392,42 +278,11 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 0.33
   m_ResolutionDepthRatio:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 0.666
   directionalLightsOnly:
-    m_OverrideState: 0
-    m_Value: 0
---- !u!114 &-6063793374152856537
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d877a03bef431a847adca8ab343db3e1, type: 3}
-  m_Name: RayTracingSettings
-  m_EditorClassIdentifier: 
-  active: 1
-  rayBias:
-    m_OverrideState: 0
-    m_Value: 0.001
-  extendShadowCulling:
-    m_OverrideState: 0
-    m_Value: 0
-  extendCameraCulling:
-    m_OverrideState: 0
-    m_Value: 0
-  directionalShadowRayLength:
-    m_OverrideState: 0
-    m_Value: 1000
-  directionalShadowFallbackIntensity:
-    m_OverrideState: 0
-    m_Value: 1
-  buildMode:
     m_OverrideState: 0
     m_Value: 0
 --- !u!114 &-3858945151148706558
@@ -599,10 +454,6 @@ MonoBehaviour:
   - {fileID: -2022036978095260930}
   - {fileID: -1747620751815023470}
   - {fileID: -6333958796991382011}
-  - {fileID: -6063793374152856537}
-  - {fileID: -7227779268347242434}
-  - {fileID: 4634109700297494155}
-  - {fileID: -6681759701916401451}
 --- !u!114 &2261801212934457102
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -696,25 +547,6 @@ MonoBehaviour:
   receiverMotionRejection:
     m_OverrideState: 0
     m_Value: 1
---- !u!114 &4634109700297494155
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464ccca2a3ef3ce429c63a5b5cd3be58, type: 3}
-  m_Name: SubSurfaceScattering
-  m_EditorClassIdentifier: 
-  active: 1
-  rayTracing:
-    m_OverrideState: 1
-    m_Value: 0
-  sampleCount:
-    m_OverrideState: 1
-    m_Value: 17
 --- !u!114 &5672847353015698948
 MonoBehaviour:
   m_ObjectHideFlags: 3

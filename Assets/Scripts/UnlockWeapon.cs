@@ -18,7 +18,7 @@ public class UnlockWeapon : MonoBehaviour
             unlockGun4();
         for (int i = 0; i<10; i++)
         {
-            Debug.Log("HAS GUN " + i + " = " + PlayerPrefs.GetInt("EquippedWeapon" + i));
+            //Debug.Log("HAS GUN " + i + " = " + PlayerPrefs.GetInt("EquippedWeapon" + i));
         }
     }
 
