@@ -22,8 +22,6 @@ public class AbominationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform);
-        transform.Rotate(0, 90, 0);
         canvas.SetActive(false);
         line.enabled = false;
         if (Vector3.Distance(transform.position, player.transform.position) < distance)

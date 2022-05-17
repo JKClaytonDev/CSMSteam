@@ -387,8 +387,6 @@ public class PlayerMovement : MonoBehaviour
             finalRun = running;
         if (PlayerPrefs.GetInt("ShiftWalk") == 1)
             finalRun = !running;
-        if (Vector3.Distance(transform.position, lastMovePos) < Time.deltaTime / 5f)
-            finalRun = false;
         camAnim.SetBool("Run", finalRun);
         if (finalRun)
         {

@@ -74,7 +74,7 @@ public class ghostCode : MonoBehaviour
             transform.LookAt(player.transform);
             transform.position += transform.forward * Time.deltaTime * 11f;
             transform.localEulerAngles = oldRot;
-            if (magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold") && Mathf.Abs((Camera.main.WorldToScreenPoint(transform.position).x - Screen.width / 2)) < 30)
+            if (magicAnim.GetCurrentAnimatorStateInfo(0).IsName("FlashHold") && Mathf.Abs((player.GetComponent<PlayerMovement>().mainCam.WorldToScreenPoint(transform.position).x - Screen.width / 2)) < 90)
             {
                 transform.position -= transform.up * Time.deltaTime * 6;
                 Vector3 lScale = transform.localScale;

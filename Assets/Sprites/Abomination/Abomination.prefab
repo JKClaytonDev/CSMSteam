@@ -372,14 +372,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3978164592315971074}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.064, z: 0}
   m_LocalScale: {x: 0.08499936, y: 0.08499936, z: 0.08499936}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3978164594050052942}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3978164592315971078
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 1765506496892194785}
   - component: {fileID: 3437672928443759984}
   - component: {fileID: 3437672928443759985}
+  - component: {fileID: 4260686462848039908}
   m_Layer: 15
   m_Name: Abomination
   m_TagString: Untagged
@@ -601,7 +602,7 @@ MonoBehaviour:
   - 0.1
   - 0.1
   - 0.1
-  - 0.1
+  - 0.17
   - 0.1
   - 0.1
   - 0.1
@@ -845,3 +846,15 @@ MonoBehaviour:
   canvas: {fileID: 1696260107}
   distance: 15
   damage: 0
+--- !u!114 &4260686462848039908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978164594050052938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7105d95adaed4494aa66a6b34dfefb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
