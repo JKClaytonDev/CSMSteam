@@ -5,9 +5,13 @@ using UnityEngine;
 public class treeBillboard : MonoBehaviour
 {
     private Camera theCam;
+    public Vector3 setOffset;
+    Vector3 offset = new Vector3(90, 180, 0);
     // Start is called before the first frame update
     void Start()
     {
+        if (setOffset != new Vector3())
+            offset = setOffset;
         cam = Camera.main;
     }
 
@@ -21,7 +25,7 @@ public class treeBillboard : MonoBehaviour
             var lookPos = transform.position - (cam.transform.position - cam.transform.forward*3);
             lookPos.y = 0;
             transform.rotation = Quaternion.LookRotation(lookPos);
-            transform.Rotate(90, 180, 0);
+            transform.Rotate(offset);
         }
         else
         {
