@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8854911341801047234}
   - component: {fileID: 8854911341801047293}
   - component: {fileID: 8854911341801047292}
+  - component: {fileID: 1038133494495290740}
   m_Layer: 0
   m_Name: StalkerObject
   m_TagString: Untagged
@@ -76,7 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2f0c1d7163af146b2097f9b900105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m: {fileID: 0}
   dontshow: 0
+  stunTime: 0
   enemyName: Jack Lanten
   unkillable: 1
   parent: {fileID: 0}
@@ -96,6 +99,7 @@ MonoBehaviour:
   bloodObj: {fileID: 8078913745217348909, guid: 9a83808ac67c22f49a50b218ff886de5, type: 3}
   hitSound: {fileID: 0}
   bloodTime: 0.5
+  colorTime: 0
 --- !u!195 &8854911341801047293
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -214,6 +218,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1038133494495290740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854911341801047238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7105d95adaed4494aa66a6b34dfefb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8854911342406674205
 GameObject:
   m_ObjectHideFlags: 0

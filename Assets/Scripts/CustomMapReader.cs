@@ -9,6 +9,7 @@ public class CustomMapReader : MonoBehaviour
     int lineIndex;
     StreamReader reader;
     public CustomMapObject[] objects;
+    public GameObject cube;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class CustomMapReader : MonoBehaviour
                 addObject(readObject(line));
         }
         reader.Close();
+        
     }
     public void addObject(CustomMapObject c)
     {
@@ -68,9 +70,18 @@ public class CustomMapReader : MonoBehaviour
         {
             return createObject(i.entities[int.Parse(info)],type,info,position,scale,rotation,texture,objectName).GetComponent<CustomMapObject>();
         }
+        if (type == "Mesh")
+        {
+            CustomMapObject c = createObject(cube, type, info, position, scale, rotation, texture, objectName).GetComponent<CustomMapObject>();
+            c.GetComponent<CustomMeshObject>().fullString = info;
+            c.GetComponent<CustomMeshObject>().GenMesh();
+            return c;
+        }
         return null;
 
     }
+
+
     public GameObject createObject(GameObject inObject, string type, string info, Vector3 position, Vector3 scale, Vector3 rotation, string texture, string objectName)
     {
         GameObject c = Instantiate(inObject);

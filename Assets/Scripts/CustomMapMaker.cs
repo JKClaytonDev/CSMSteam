@@ -41,6 +41,7 @@ public class CustomMapMaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (FindObjectOfType<MapData>())
         {
             if (FindObjectOfType<MapData>().mapData != null)

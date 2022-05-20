@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781cc897cf8675041a751163b51f97dd, type: 3}
   m_Name: HDRenderPipelineGlobalSettings
   m_EditorClassIdentifier: 
-  m_DefaultVolumeProfile: {fileID: 11400000, guid: f940a8037e6cda542891dc1aac1fa4e8, type: 2}
+  m_DefaultVolumeProfile: {fileID: 11400000, guid: 517c45e20dce7f248a292d106f4d2c3f, type: 2}
   m_LookDevVolumeProfile: {fileID: 0}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
@@ -85,85 +85,17 @@ MonoBehaviour:
   lensAttenuationMode: 0
   colorGradingSpace: 0
   diffusionProfileSettingsList: []
-  rendererListCulling: 0
+  rendererListCulling: 1
   DLSSProjectId: 000000
   useDLSSCustomProjectId: 0
   supportProbeVolumes: 0
   supportRuntimeDebugDisplay: 0
   apvScenesData:
     serializedBounds: []
-    serializedHasVolumes:
-    - sceneGUID: 0e3a3c278f5d52740924604b29da316a
-      hasProbeVolumes: 0
-    - sceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
-      hasProbeVolumes: 0
-    serializedProfiles:
-    - sceneGUID: 0e3a3c278f5d52740924604b29da316a
-      profile: {fileID: 11400000, guid: c16029cf9881de245a3a30648b379dbb, type: 2}
-    - sceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
-      profile: {fileID: 11400000, guid: c16029cf9881de245a3a30648b379dbb, type: 2}
-    serializedBakeSettings:
-    - sceneGUID: 0e3a3c278f5d52740924604b29da316a
-      settings:
-        m_Version: 1
-        dilationSettings:
-          enableDilation: 1
-          dilationDistance: 1
-          dilationValidityThreshold: 0.25
-          dilationIterations: 1
-          squaredDistWeighting: 1
-        virtualOffsetSettings:
-          useVirtualOffset: 1
-          outOfGeoOffset: 0.01
-          searchMultiplier: 0.2
-          rayOriginBias: -0.001
-          maxHitsPerRay: 10
-          collisionMask:
-            serializedVersion: 2
-            m_Bits: 4294967291
-    - sceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
-      settings:
-        m_Version: 1
-        dilationSettings:
-          enableDilation: 1
-          dilationDistance: 1
-          dilationValidityThreshold: 0.25
-          dilationIterations: 1
-          squaredDistWeighting: 1
-        virtualOffsetSettings:
-          useVirtualOffset: 1
-          outOfGeoOffset: 0.01
-          searchMultiplier: 0.2
-          rayOriginBias: -0.001
-          maxHitsPerRay: 10
-          collisionMask:
-            serializedVersion: 2
-            m_Bits: 4294967291
-    serializedBakingSets:
-    - name: Default
-      sceneGUIDs:
-      - 0e3a3c278f5d52740924604b29da316a
-      - 9fc0d4010bbf28b4594072e72b8655ab
-      settings:
-        m_Version: 1
-        dilationSettings:
-          enableDilation: 1
-          dilationDistance: 1
-          dilationValidityThreshold: 0.25
-          dilationIterations: 1
-          squaredDistWeighting: 1
-        virtualOffsetSettings:
-          useVirtualOffset: 1
-          outOfGeoOffset: 0.01
-          searchMultiplier: 0.2
-          rayOriginBias: -0.001
-          maxHitsPerRay: 10
-          collisionMask:
-            serializedVersion: 2
-            m_Bits: 4294967291
-      profile: {fileID: 11400000, guid: c16029cf9881de245a3a30648b379dbb, type: 2}
-      lightingScenarios:
-      - Default
+    serializedHasVolumes: []
+    serializedProfiles: []
+    serializedBakeSettings: []
+    serializedBakingSets: []
     m_LightingScenario: Default
   m_Version: 3
   m_ShaderVariantLogLevel: 0

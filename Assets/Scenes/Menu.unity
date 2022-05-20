@@ -5999,7 +5999,6 @@ MonoBehaviour:
   m_Script: {fileID: 280875405}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &645890246
 Transform:
   m_ObjectHideFlags: 19
@@ -22154,30 +22153,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6622266865023703090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6622266865023703092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f93b2571d9ada43a63dbbc8c276c4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6622266865023703091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6622266865023703092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6622266865023703092
 GameObject:
   m_ObjectHideFlags: 0
@@ -22187,8 +22162,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6622266865023703093}
-  - component: {fileID: 6622266865023703090}
-  - component: {fileID: 6622266865023703091}
   m_Layer: 0
   m_Name: Player_ListItem
   m_TagString: Untagged

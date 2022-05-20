@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InputPrefabs : MonoBehaviour
 {
     public string type;
+    public InputField i2;
     public GameObject[] props;
     public GameObject[] entities;
     public GameObject[] models;
@@ -13,8 +14,34 @@ public class InputPrefabs : MonoBehaviour
     public Text fillText;
     public int SelectedIndex;
     public GameObject spawnPos;
-    // Start is called before the first frame update
+    GameObject selectedObject;
 
+    public void setText(string s)
+    {
+        t.text = s;
+        fillText.text = s;
+        i2.SetTextWithoutNotify(s);
+    }
+    // Start is called before the first frame update
+    private void Start()
+    {
+        foreach (GameObject g in props)
+        {
+            FindObjectOfType<prefabPhotoBooth>().CreatePrefabPhoto(g);
+            //FindObjectOfType<prefabPhotoBooth>().CreatePrefabPhoto(g);
+        }
+        foreach (GameObject g in entities)
+        {
+            FindObjectOfType<prefabPhotoBooth>().CreatePrefabPhoto(g);
+            
+        }
+        foreach (GameObject g in models)
+        {
+            FindObjectOfType<prefabPhotoBooth>().CreatePrefabPhoto(g);
+            
+        }
+        FindObjectOfType<prefabPhotoBooth>().GetComponent<Camera>().gameObject.SetActive(false);
+    }
     public void createObject()
     {
         if (type == "Prop")
@@ -28,15 +55,31 @@ public class InputPrefabs : MonoBehaviour
     public void newObject(GameObject clone, string type, string info)
     {
         GameObject k = Instantiate(clone);
-        k.transform.position = spawnPos.transform.position;
-        k.transform.parent = null;
+        
         k.AddComponent<CustomMapObject>();
         k.GetComponent<CustomMapObject>().type = type;
         k.GetComponent<CustomMapObject>().info = info;
+        selectedObject = k;
     }
+
     // Update is called once per frame
     void Update()
     {
+        if (selectedObject)
+        {
+            selectedObject.SetActive(false);
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit))
+                {
+                selectedObject.transform.position = hit.point - ray.direction + Vector3.up * selectedObject.transform.localScale.y;
+                selectedObject.transform.parent = null;
+                }
+            selectedObject.SetActive(true);
+            if (Input.GetMouseButton(0))
+                selectedObject = null;
+ 
+        }
         foreach (Animator anim in FindObjectsOfType<Animator>())
             Destroy(anim);
         foreach (ZombieScript anim in FindObjectsOfType<ZombieScript>())
@@ -58,9 +101,9 @@ public class InputPrefabs : MonoBehaviour
                 for (int i = 0; i<props.Length; i++)
                 {
                     GameObject g = props[i];
-                    if (g.name.Contains(t.text))
+                    if (g.name.ToUpper().Contains(t.text.ToUpper()))
                     {
-                        if (g.name.Substring(0, t.text.Length) == t.text) {
+                        if (g.name.Substring(0, t.text.Length).ToUpper() == t.text.ToUpper()) {
                             if (g.name.Length < fillText.text.Length)
                             {
                                 type = "Prop";
@@ -73,9 +116,9 @@ public class InputPrefabs : MonoBehaviour
                 for (int i = 0; i < entities.Length; i++)
                 {
                     GameObject g = entities[i];
-                    if (g.name.Contains(t.text))
+                    if (g.name.ToUpper().Contains(t.text.ToUpper()))
                     {
-                        if (g.name.Substring(0, t.text.Length) == t.text)
+                        if (g.name.Substring(0, t.text.Length).ToUpper() == t.text.ToUpper())
                         {
                             if (g.name.Length < fillText.text.Length)
                             {
@@ -89,9 +132,9 @@ public class InputPrefabs : MonoBehaviour
                 for (int i = 0; i < models.Length; i++)
                 {
                     GameObject g = models[i];
-                    if (g.name.Contains(t.text))
+                    if (g.name.ToUpper().Contains(t.text.ToUpper()))
                     {
-                        if (g.name.Substring(0, t.text.Length) == t.text)
+                        if (g.name.Substring(0, t.text.Length).ToUpper() == t.text.ToUpper())
                         {
                             if (g.name.Length < fillText.text.Length)
                             {
